@@ -32,7 +32,7 @@ button{font:inherit}
 .hero{height:100vh;min-height:720px;position:relative;overflow:hidden;background:#0a0d12;color:white}
 .hero-image{
   position:absolute;inset:0;background-color:#080b10;
-  background-image:url("assets/hero-car.webp");
+  background-image:url("assets/hero-future-city.webp");
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center center;
@@ -155,4 +155,93 @@ footer img{width:190px;filter:brightness(.2)}
 .site-header.scrolled .brand img{width:235px;max-height:52px}
 @media (prefers-reduced-motion:reduce){
   .hero-image,.reveal{animation:none!important;transition:none!important}
+}
+
+
+/* V5 — generated cinematic homepage hero */
+.hero-v5{
+  min-height:100svh;
+  height:100svh;
+  overflow:hidden;
+  background:#071525;
+}
+.hero-v5 .hero-image{
+  position:absolute;
+  inset:0;
+  background-image:url("assets/hero-future-city.webp");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  transform:none;
+  animation:none;
+}
+.hero-v5 .hero-overlay{
+  background:linear-gradient(
+    180deg,
+    rgba(3,10,18,.08) 0%,
+    rgba(3,10,18,0) 62%,
+    rgba(3,10,18,.18) 100%
+  );
+}
+.hero-v5 .hero-content{
+  display:none;
+}
+.hero-v5 .scroll-indicator{
+  display:none;
+}
+
+/* Keep the real site header clickable while matching the visual */
+.hero-v5 .site-header{
+  background:transparent;
+}
+.site-header{
+  z-index:20;
+}
+.site-header .brand{
+  opacity:0;
+  pointer-events:none;
+}
+.site-header nav a{
+  color:transparent;
+  text-shadow:none;
+  min-width:74px;
+  min-height:34px;
+}
+.site-header nav{
+  gap:20px;
+}
+.site-header.scrolled{
+  background:rgba(5,10,17,.86);
+  backdrop-filter:blur(14px);
+}
+.site-header.scrolled .brand{
+  opacity:1;
+  pointer-events:auto;
+}
+.site-header.scrolled nav a{
+  color:#fff;
+}
+
+/* Responsive positioning */
+@media (max-width:900px){
+  .hero-v5 .hero-image{
+    background-position:58% center;
+  }
+  .site-header .brand{
+    opacity:1;
+    pointer-events:auto;
+  }
+  .site-header nav a{
+    color:#fff;
+  }
+}
+@media (max-width:640px){
+  .hero-v5{
+    min-height:82svh;
+    height:82svh;
+  }
+  .hero-v5 .hero-image{
+    background-size:cover;
+    background-position:64% center;
+  }
 }
