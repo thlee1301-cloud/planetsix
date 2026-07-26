@@ -13,11 +13,17 @@
 <body>
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="PLANET SIX STUDIO 홈">
-      <img src="assets/planet-six-logo.png" alt="PLANET SIX STUDIO">
+      <img class="brand-symbol" src="assets/planet-six-symbol-original.png" alt="">
+      <span class="brand-type">
+        <strong>PLANET·SIX</strong>
+        <small>STUDIO</small>
+      </span>
     </a>
+
     <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false">
       <span></span><span></span>
     </button>
+
     <nav class="nav" aria-label="주요 메뉴">
       <a href="#about">ABOUT</a>
       <a href="#works">WORKS</a>
@@ -30,9 +36,9 @@
   <main>
     <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-tone" aria-hidden="true"></div>
 
-      <div class="hero-inner">
+      <div class="hero-content">
         <div class="brand-panel" aria-label="PLANET SIX STUDIO">
           <div class="wordmark">
             <span>P</span><span>L</span>
@@ -50,15 +56,20 @@
 
         <div class="hero-message">
           <p class="hero-label">AI 영상 제작 스튜디오</p>
-          <h1 id="hero-heading"><span>상상을 영상으로.</span><em>영상을 만들어보세요.</em></h1>
-          <p class="hero-description">생성형 AI와 시네마틱 연출로 브랜드 필름, 광고, 제품 영상과 공공 캠페인을 제작합니다.</p>
+          <h1 id="hero-heading"><span>상상을,</span><em>새로운 영상으로.</em></h1>
+          <p class="hero-description">기업 홍보 영상, 브랜드 필름, 제품 영상, 공공 캠페인까지 플래닛식스가 새로운 방식으로 완성합니다.</p>
 
           <div class="hero-actions">
-            <a class="gloss-button primary-button" href="#contact">
-              <span class="button-shine"></span><b>영상 제작 문의하기</b><i>→</i>
+            <a class="depth-button inquiry-button" href="#contact">
+              <span class="button-gloss"></span>
+              <b>영상 제작 문의하기</b>
+              <i>→</i>
             </a>
-            <a class="gloss-button secondary-button" href="#works">
-              <span class="button-shine"></span><i>▶</i><b>작품 보기</b>
+            <a class="depth-button works-button" href="#works">
+              <span class="button-gloss"></span>
+              <i class="play">▶</i>
+              <b>작품 보기</b>
+              <i>→</i>
             </a>
           </div>
         </div>
@@ -131,7 +142,10 @@
   </main>
 
   <footer>
-    <img src="assets/planet-six-logo.png" alt="PLANET SIX STUDIO">
+    <div class="footer-brand">
+      <img src="assets/planet-six-symbol-original.png" alt="">
+      <span>PLANET·SIX STUDIO</span>
+    </div>
     <p>© 2026 PLANET SIX STUDIO. ALL RIGHTS RESERVED.</p>
     <a href="#top">BACK TO TOP ↑</a>
   </footer>
