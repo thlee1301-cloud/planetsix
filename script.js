@@ -1,18 +1,9 @@
-document.body.classList.add('intro-playing');
-
-const intro = document.querySelector('.brand-intro');
-intro?.addEventListener('animationend', (event) => {
-  if (event.animationName === 'introExit') {
-    document.body.classList.remove('intro-playing');
-    intro.remove();
-  }
-});
-
 const header = document.querySelector('.site-header');
-const updateHeader = () => header?.classList.toggle('scrolled', window.scrollY > 40);
+const updateHeader = () => {
+  if (header) header.classList.toggle('scrolled', window.scrollY > 40);
+};
 window.addEventListener('scroll', updateHeader, { passive: true });
 updateHeader();
-
 
 const button = document.querySelector('.menu-button');
 const nav = document.querySelector('.nav');
