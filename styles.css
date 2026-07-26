@@ -18,7 +18,7 @@ button{font:inherit}
   position:absolute;z-index:20;top:0;left:0;width:100%;
   height:108px;padding:24px 5vw;display:flex;align-items:center;justify-content:space-between;
 }
-.brand img{width:285px;max-height:72px;object-fit:contain;object-position:left center}
+.brand img{width:340px;max-height:78px;object-fit:contain;object-position:left center}
 .nav{display:flex;gap:42px;color:white;font-size:12px;font-weight:600;letter-spacing:.12em}
 .nav a{position:relative}
 .nav a:after{content:"";position:absolute;left:0;bottom:-9px;width:0;height:2px;background:var(--red);transition:.25s}
@@ -28,14 +28,18 @@ button{font:inherit}
 
 .hero{height:100vh;min-height:720px;position:relative;overflow:hidden;background:#0a0d12;color:white}
 .hero-image{
-  position:absolute;inset:0;background-image:url("assets/hero-car.webp");
-  background-size:cover;background-position:center 55%;transform:scale(1.035);
+  position:absolute;inset:0;background-color:#080b10;
+  background-image:url("assets/hero-car.webp");
+  background-size:auto 100%;
+  background-repeat:no-repeat;
+  background-position:right center;
+  transform:scale(1.01);
   animation:heroDrift 16s ease-in-out infinite alternate;
 }
-@keyframes heroDrift{to{transform:scale(1.09) translateX(-1.2%)}}
+@keyframes heroDrift{to{transform:scale(1.035) translateX(-.5%)}}
 .hero-shade{
   position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(5,8,12,.92) 0%,rgba(5,8,12,.68) 36%,rgba(5,8,12,.08) 70%,rgba(5,8,12,.12) 100%);
+  background:linear-gradient(90deg,rgba(5,8,12,.98) 0%,rgba(5,8,12,.86) 31%,rgba(5,8,12,.34) 53%,rgba(5,8,12,.08) 78%,rgba(5,8,12,.12) 100%);
 }
 .hero-glow{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),transparent 50%,rgba(0,0,0,.38))}
 .hero-content{position:relative;z-index:2;padding:23vh 7vw 8vh;max-width:760px}
@@ -95,12 +99,12 @@ footer img{width:190px;filter:brightness(.2)}
 .reveal.visible{opacity:1;transform:none}
 @media (max-width:900px){
   .site-header{height:82px;padding:16px 5vw}
-  .brand img{width:220px}
+  .brand img{width:250px}
   .menu-button{display:block;position:relative;z-index:30}
   .nav{position:fixed;inset:0;background:rgba(5,8,12,.97);display:flex;flex-direction:column;justify-content:center;align-items:center;font-size:18px;opacity:0;pointer-events:none;transition:.25s}
   .nav.open{opacity:1;pointer-events:auto}
   .hero-content{padding:22vh 6vw 8vh}
-  .hero-image{background-position:62% center}
+  .hero-image{background-size:auto 100%;background-position:72% center}
   .hero-shade{background:linear-gradient(90deg,rgba(5,8,12,.94),rgba(5,8,12,.5) 70%,rgba(5,8,12,.25))}
   .intro-grid,.work-grid,.service-grid,.process-list{grid-template-columns:1fr}
   .service,.process-list li{border-right:0;border-bottom:1px solid var(--line)}
