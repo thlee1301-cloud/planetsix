@@ -195,3 +195,91 @@ footer img{width:190px;filter:brightness(.2)}
   *{scroll-behavior:auto!important}
   .reveal{transition:none!important}
 }
+
+
+/* V7: brighter, more conventional corporate homepage hero */
+.hero{min-height:760px;background:#9cc7e4}
+.hero-media{
+  background-image:
+    linear-gradient(90deg,rgba(232,247,255,.82) 0%,rgba(224,243,255,.38) 31%,rgba(196,225,244,.04) 66%),
+    url("assets/hero-v6-city.webp");
+  background-size:cover;background-position:center 49%;
+  filter:brightness(1.18) saturate(.94) contrast(.94);
+  transform:scale(1.01);
+}
+.hero-vignette{
+  background:
+    linear-gradient(90deg,rgba(239,249,255,.68) 0%,rgba(231,245,255,.20) 38%,rgba(10,23,37,.02) 72%),
+    linear-gradient(180deg,rgba(5,17,29,.04),rgba(5,17,29,.02) 61%,rgba(5,17,29,.25));
+}
+.hero-stage{
+  position:relative;z-index:4;height:100%;display:flex;align-items:center;justify-content:flex-start;
+  padding:118px 6vw 72px;text-align:left;
+}
+.hero-copy-block{width:min(690px,54vw);display:flex;flex-direction:column;align-items:flex-start}
+.hero-overline{
+  margin:0 0 15px;color:#182a39;font-family:"Noto Sans KR",sans-serif;
+  font-size:15px;font-weight:600;letter-spacing:.08em
+}
+.gloss-panel{width:min(680px,53vw);padding:31px 42px 27px;border-radius:24px}
+.wordmark{
+  display:flex;align-items:center;justify-content:center;gap:.15em;width:100%;
+  font-family:"Syne","Manrope",sans-serif;font-size:clamp(38px,4.3vw,65px);
+  font-weight:400;line-height:1;letter-spacing:.075em;white-space:nowrap;color:#fff
+}
+.wordmark strong{color:var(--red);font-weight:400;letter-spacing:.1em}
+.wordmark b{font-weight:300;font-size:.55em;color:#fff;margin:0 .04em}
+.a-symbol{width:.78em;height:.92em;display:inline-flex;color:#fff}
+.a-symbol svg{width:100%;height:100%;display:block;overflow:visible}
+.studio{margin-top:17px;text-align:center;font-size:13px;letter-spacing:.72em;padding-left:.72em}
+.hero-copy-block h1{
+  margin:27px 0 0;color:#12202d;font-family:"Noto Sans KR","Manrope",sans-serif;
+  font-size:clamp(34px,4vw,58px);font-weight:500;line-height:1.22;letter-spacing:-.055em
+}
+.hero-copy-block h1 em{font-style:normal;color:var(--red)}
+.hero-description{
+  max-width:570px;margin:18px 0 0;color:#344a5d;font-family:"Noto Sans KR",sans-serif;
+  font-size:15px;line-height:1.8
+}
+.hero-actions{display:flex;gap:12px;margin-top:27px;flex-wrap:wrap}
+.primary-action,.secondary-action{
+  min-height:52px;padding:0 24px;display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  font-family:"Noto Sans KR",sans-serif;font-size:14px;font-weight:600;transition:.25s
+}
+.primary-action{background:var(--red);color:#fff;box-shadow:0 12px 30px rgba(227,6,19,.22)}
+.primary-action:hover{transform:translateY(-2px);background:#c8000b}
+.secondary-action{background:rgba(255,255,255,.78);color:#132331;border:1px solid rgba(19,35,49,.22);backdrop-filter:blur(8px)}
+.secondary-action span{color:var(--red)}
+.secondary-action:hover{background:#fff;transform:translateY(-2px)}
+.hero-car-original{
+  position:absolute;z-index:3;right:-1.5vw;bottom:-1.5vh;width:min(56vw,930px);height:auto;
+  object-fit:contain;filter:drop-shadow(0 30px 42px rgba(2,9,16,.30));pointer-events:none
+}
+.site-header:not(.scrolled){background:linear-gradient(180deg,rgba(4,12,20,.28),rgba(4,12,20,0))}
+.site-header:not(.scrolled) .brand img{filter:drop-shadow(0 2px 7px rgba(0,0,0,.35))}
+@media(max-width:1100px){
+  .hero-copy-block{width:min(660px,60vw)}
+  .gloss-panel{width:min(640px,59vw)}
+  .hero-car-original{width:min(58vw,760px);right:-9vw}
+}
+@media(max-width:900px){
+  .hero-stage{align-items:flex-start;padding-top:128px}
+  .hero-copy-block{width:100%}
+  .gloss-panel{width:min(720px,88vw)}
+  .hero-car-original{width:min(76vw,690px);right:-14vw;bottom:-2vh;opacity:.93}
+  .hero-copy-block h1,.hero-description{max-width:65vw}
+}
+@media(max-width:640px){
+  .hero{height:auto;min-height:780px}
+  .hero-stage{padding:110px 5vw 250px}
+  .hero-overline{font-size:13px}
+  .gloss-panel{width:90vw;padding:24px 15px 21px;border-radius:19px}
+  .wordmark{font-size:clamp(24px,8.2vw,39px);gap:.08em;letter-spacing:.025em}
+  .studio{font-size:9px;letter-spacing:.52em;padding-left:.52em}
+  .hero-copy-block h1{max-width:none;font-size:35px;margin-top:24px}
+  .hero-description{max-width:none;font-size:14px}
+  .hero-actions{width:100%}
+  .primary-action,.secondary-action{flex:1;padding:0 15px;font-size:13px}
+  .hero-car-original{width:94vw;right:-18vw;bottom:-1vh}
+  .hero-media{background-position:57% center}
+}
