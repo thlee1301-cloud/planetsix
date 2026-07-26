@@ -1,4 +1,64 @@
 
+body.intro-playing{overflow:hidden}
+
+/* Cinematic brand opening */
+.brand-intro{
+  position:fixed;inset:0;z-index:9999;background:#05070a;
+  display:grid;place-items:center;overflow:hidden;
+  animation:introExit 1s cubic-bezier(.76,0,.24,1) 3.8s forwards;
+}
+.intro-dot{
+  position:absolute;width:8px;height:8px;border-radius:50%;background:var(--red);
+  box-shadow:0 0 18px rgba(227,6,19,.75);
+  animation:dotBloom 1.15s cubic-bezier(.2,.75,.2,1) .25s both;
+}
+.intro-orbit{
+  position:absolute;width:190px;height:190px;border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;opacity:0;transform:scale(.3) rotate(-35deg);
+  animation:orbitReveal 1.2s ease 1.05s forwards;
+}
+.intro-six{
+  position:absolute;color:var(--red);font-family:"Syne",sans-serif;
+  font-size:clamp(74px,10vw,140px);font-weight:500;line-height:1;
+  opacity:0;transform:scale(.72);letter-spacing:-.12em;
+  animation:sixReveal .8s cubic-bezier(.16,1,.3,1) 1.2s forwards,
+            sixShift .8s cubic-bezier(.76,0,.24,1) 2.15s forwards;
+}
+.intro-wordmark{
+  display:flex;flex-direction:column;align-items:flex-start;
+  transform:translateX(38px);opacity:0;
+  animation:wordmarkReveal .9s cubic-bezier(.16,1,.3,1) 2.25s forwards;
+}
+.intro-wordmark span{
+  color:white;font-family:"Syne","Manrope",sans-serif;font-size:clamp(25px,4vw,54px);
+  font-weight:400;letter-spacing:.34em;white-space:nowrap;
+}
+.intro-wordmark small{
+  color:var(--red);font-family:"Manrope",sans-serif;font-size:clamp(10px,1vw,14px);
+  font-weight:600;letter-spacing:.72em;margin-top:12px;margin-left:3px;
+}
+@keyframes dotBloom{
+  0%{opacity:0;transform:scale(0)}
+  45%{opacity:1;transform:scale(1)}
+  100%{opacity:1;transform:scale(9);filter:blur(.3px)}
+}
+@keyframes orbitReveal{
+  to{opacity:1;transform:scale(1) rotate(0)}
+}
+@keyframes sixReveal{
+  to{opacity:1;transform:scale(1)}
+}
+@keyframes sixShift{
+  to{transform:translateX(clamp(-170px,-13vw,-95px)) scale(.42)}
+}
+@keyframes wordmarkReveal{
+  to{opacity:1;transform:translateX(54px)}
+}
+@keyframes introExit{
+  to{opacity:0;visibility:hidden;transform:scale(1.035);pointer-events:none}
+}
+
+
 :root{
   --red:#e30613;
   --ink:#101216;
@@ -18,7 +78,7 @@ button{font:inherit}
   position:absolute;z-index:20;top:0;left:0;width:100%;
   height:108px;padding:24px 5vw;display:flex;align-items:center;justify-content:space-between;
 }
-.brand img{width:340px;max-height:78px;object-fit:contain;object-position:left center}
+.brand img{width:300px;max-height:68px;object-fit:contain;object-position:left center;transition:.35s ease}
 .nav{display:flex;gap:42px;color:white;font-size:12px;font-weight:600;letter-spacing:.12em}
 .nav a{position:relative}
 .nav a:after{content:"";position:absolute;left:0;bottom:-9px;width:0;height:2px;background:var(--red);transition:.25s}
@@ -45,8 +105,25 @@ button{font:inherit}
 .hero-content{position:relative;z-index:2;padding:23vh 7vw 8vh;max-width:760px}
 .eyebrow{font-size:22px;font-weight:300;letter-spacing:-.03em;margin:0 0 24px}
 .eyebrow span{color:var(--red);font-weight:600}
-.hero h1{margin:0;font-size:clamp(54px,7vw,112px);font-weight:300;line-height:.95;letter-spacing:.18em}
-.hero h1 em{display:block;color:var(--red);font-style:normal;font-size:.54em;letter-spacing:.42em;margin-top:28px}
+.hero-wordmark{
+  margin:0;display:flex;align-items:baseline;flex-wrap:wrap;
+  font-family:"Syne","Manrope",sans-serif;
+  font-size:clamp(54px,7.4vw,116px);font-weight:400;line-height:.9;
+  letter-spacing:.02em;
+}
+.hero-wordmark .planet{letter-spacing:.17em}
+.hero-wordmark .six{
+  color:var(--red);margin-left:.17em;letter-spacing:-.035em;font-weight:500;
+}
+.hero-wordmark em{
+  flex-basis:100%;display:block;color:rgba(255,255,255,.72);font-style:normal;
+  font-family:"Manrope",sans-serif;font-size:.18em;font-weight:600;
+  letter-spacing:.82em;margin-top:28px;margin-left:5px;
+}
+.hero-manifesto{
+  margin:38px 0 0;font-family:"Manrope",sans-serif;
+  font-size:11px;font-weight:600;letter-spacing:.42em;color:rgba(255,255,255,.5);
+}
 .hero-copy{font-size:16px;line-height:1.9;font-weight:300;color:rgba(255,255,255,.78);margin:34px 0}
 .hero-actions{display:flex;gap:18px;flex-wrap:wrap}
 .button{height:52px;padding:0 30px;display:inline-flex;align-items:center;gap:14px;border:1px solid rgba(255,255,255,.55);font-size:12px;font-weight:600;letter-spacing:.09em}
@@ -115,10 +192,25 @@ footer img{width:190px;filter:brightness(.2)}
 @media (max-width:560px){
   .section{padding:78px 6vw}
   .hero{min-height:680px}
-  .hero h1{font-size:46px;letter-spacing:.11em}
-  .hero h1 em{letter-spacing:.28em}
+  .hero-wordmark{font-size:44px}
+  .hero-wordmark .planet{letter-spacing:.1em}
+  .hero-wordmark em{letter-spacing:.46em;font-size:.2em}
   .hero-copy{font-size:14px}
   .button{width:100%;justify-content:center}
   .scroll-cue{display:none}
   .contact-links{font-size:16px;gap:18px}
+}
+
+.site-header{
+  transition:height .35s ease,background .35s ease,backdrop-filter .35s ease,padding .35s ease;
+}
+.site-header.scrolled{
+  position:fixed;height:76px;padding-top:12px;padding-bottom:12px;
+  background:rgba(5,8,12,.78);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.site-header.scrolled .brand img{width:235px;max-height:52px}
+@media (prefers-reduced-motion:reduce){
+  .brand-intro{display:none}
+  .hero-image,.reveal{animation:none!important;transition:none!important}
 }

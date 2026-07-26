@@ -1,13 +1,16 @@
-PLANET SIX STUDIO 홈페이지 V2
+PLANET SIX STUDIO 홈페이지 V3
 
 이번 수정
-- 자동차가 화면을 과도하게 차지하지 않도록 축소
-- 왼쪽에 카피가 읽히는 여백 확보
-- 로고 크기 확대
-- 메인 이미지의 움직임을 더 절제되게 조정
+- 검은 화면에서 붉은 점 → 6 → PLANET SIX로 이어지는 영화형 오프닝 추가
+- 첫 화면 PLANET SIX 타이포그래피를 명함처럼 얇고 감각적인 스타일로 변경
+- SIX를 붉은색으로 강조
+- 'IMAGINE BEYOND REALITY' 브랜드 문구 추가
+- 스크롤하면 상단 로고와 메뉴가 작아지는 고정형 내비게이션 추가
+- 기존 자동차 배경과 전체 사이트 구조는 유지
 
-교체 방법
-1. GitHub 저장소에서 '파일 추가 → 파일 업로드'
-2. 이 압축을 풀고, 기존 파일과 같은 위치에 모두 업로드
-3. 같은 이름의 파일을 덮어쓴 뒤 '변경 사항 커밋'
-4. 1~3분 후 홈페이지에서 Ctrl+F5
+업로드 방법
+1. 압축을 풉니다.
+2. GitHub planetsix 저장소에서 'Add file → Upload files'를 누릅니다.
+3. index.html, styles.css, script.js, README.txt와 assets 폴더를 업로드합니다.
+4. 같은 이름의 파일은 덮어쓴 뒤 Commit changes를 누릅니다.
+5. 1~3분 후 홈페이지에서 Ctrl+F5를 누릅니다.
