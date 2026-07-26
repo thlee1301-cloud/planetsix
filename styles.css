@@ -1,100 +1,50 @@
 
-:root{--red:#e30613;--ink:#12161b;--muted:#66717c;--line:rgba(18,22,27,.13)}
+:root{--red:#e30613;--ink:#11161d;--muted:#5f6b76;--line:rgba(17,22,29,.13)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:#fff;color:var(--ink);font-family:"Manrope","Noto Sans KR",sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-.site-header{
-  position:absolute;z-index:30;top:0;left:0;width:100%;height:92px;padding:18px 4.5vw;
-  display:flex;align-items:center;justify-content:space-between;
-  background:linear-gradient(180deg,rgba(4,11,18,.35),rgba(4,11,18,0));
-  transition:.3s ease;
-}
-.brand img{width:205px;max-height:58px;object-fit:contain;object-position:left center;filter:drop-shadow(0 2px 7px rgba(0,0,0,.4))}
+.site-header{position:absolute;z-index:40;top:0;left:0;width:100%;height:94px;padding:18px 4.6vw;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(4,11,18,.34),rgba(4,11,18,0));transition:.3s}
+.brand img{width:245px;max-height:64px;object-fit:contain;object-position:left center;filter:drop-shadow(0 2px 8px rgba(0,0,0,.42))}
 .nav{display:flex;gap:36px;color:#fff;font-size:12px;font-weight:600;letter-spacing:.11em}
 .nav a{position:relative;text-shadow:0 1px 8px rgba(0,0,0,.55)}
 .nav a:after{content:"";position:absolute;left:0;bottom:-9px;width:0;height:2px;background:var(--red);transition:.25s}
 .nav a:hover:after{width:100%}
 .menu-button{display:none;background:none;border:0}
 .menu-button span{display:block;width:25px;height:1px;background:#fff;margin:7px}
-.site-header.scrolled{position:fixed;height:72px;background:rgba(5,10,16,.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+.site-header.scrolled{position:fixed;height:72px;background:rgba(5,10,16,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+.site-header.scrolled .brand img{width:205px}
 
-.hero{position:relative;height:100svh;min-height:760px;overflow:hidden;background:#b7d9eb}
-.hero-city{
-  position:absolute;inset:0;background:url("assets/hero-v8-city.webp") center 56%/cover no-repeat;
-  filter:brightness(1.08) saturate(.9);
-}
-.hero-light{
-  position:absolute;inset:0;
-  background:
-    linear-gradient(90deg,rgba(239,249,255,.96) 0%,rgba(231,246,255,.84) 31%,rgba(216,237,249,.42) 52%,rgba(8,21,34,.05) 76%),
-    linear-gradient(180deg,rgba(255,255,255,.08),rgba(3,12,20,.18));
-}
-.hero-glass{
-  position:absolute;left:-6vw;top:0;width:53vw;height:100%;
-  background:
-    radial-gradient(circle at 25% 25%,rgba(255,255,255,.8),rgba(255,255,255,.16) 42%,transparent 68%),
-    linear-gradient(135deg,rgba(255,255,255,.35),rgba(255,255,255,.04));
-  clip-path:polygon(0 0,100% 0,82% 100%,0 100%);
-  opacity:.72;
-}
-.hero-content{
-  position:relative;z-index:4;width:min(690px,50vw);height:100%;
-  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
-  padding:108px 0 68px 6vw;
-}
-.hero-label{margin:0 0 14px;color:#20394b;font-family:"Noto Sans KR",sans-serif;font-size:15px;font-weight:600;letter-spacing:.08em}
-.brand-panel{
-  position:relative;overflow:hidden;isolation:isolate;width:min(650px,48vw);padding:30px 40px 24px;border-radius:24px;
-  background:linear-gradient(180deg,rgba(30,31,34,.98),rgba(3,4,6,.995) 60%,rgba(9,10,12,.99));
-  border:1px solid rgba(255,255,255,.38);
-  box-shadow:0 24px 64px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.5),inset 0 -2px 0 rgba(0,0,0,.82),0 0 0 5px rgba(0,0,0,.17);
-}
-.brand-panel:before{
-  content:"";position:absolute;z-index:-1;width:76%;height:72%;left:-7%;top:-38%;
-  border-radius:0 0 68% 0/0 0 100% 0;
-  background:linear-gradient(154deg,rgba(255,255,255,.73),rgba(255,255,255,.36) 22%,rgba(255,255,255,.1) 48%,transparent 72%);
-}
-.brand-panel:after{
-  content:"";position:absolute;z-index:-1;inset:0;
-  background:linear-gradient(90deg,transparent 0 28%,rgba(0,0,0,.26) 49%,rgba(0,0,0,.5) 61%,rgba(0,0,0,.1) 82%,transparent 100%);
-}
-.wordmark{
-  display:flex;align-items:center;justify-content:center;gap:.14em;color:#fff;white-space:nowrap;
-  font-family:"Syne","Manrope",sans-serif;font-size:clamp(36px,4.1vw,62px);font-weight:400;line-height:1;letter-spacing:.07em;
-}
+.hero{position:relative;height:100svh;min-height:780px;overflow:hidden;background:#bcdff0}
+.hero-bg{position:absolute;inset:0;background:url("assets/hero-v10-city.webp") center 54%/cover no-repeat;filter:brightness(1.1) saturate(.9)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(5,14,24,.12) 63%,rgba(4,12,20,.28)),linear-gradient(90deg,rgba(231,245,253,.68) 0%,rgba(224,241,251,.35) 31%,rgba(8,21,33,.02) 72%)}
+.hero-inner{position:relative;z-index:4;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16vh;text-align:center}
+.brand-panel{position:relative;isolation:isolate;overflow:hidden;width:min(730px,58vw);padding:35px 48px 30px;border-radius:25px;background:linear-gradient(180deg,rgba(30,31,34,.98),rgba(3,4,6,.996) 60%,rgba(9,10,12,.99));border:1px solid rgba(255,255,255,.38);box-shadow:0 24px 68px rgba(0,0,0,.36),inset 0 1px 0 rgba(255,255,255,.52),inset 0 -2px 0 rgba(0,0,0,.84),0 0 0 5px rgba(0,0,0,.17)}
+.brand-panel:before{content:"";position:absolute;z-index:-1;width:76%;height:72%;left:-7%;top:-38%;border-radius:0 0 68% 0/0 0 100% 0;background:linear-gradient(154deg,rgba(255,255,255,.72),rgba(255,255,255,.35) 22%,rgba(255,255,255,.1) 48%,transparent 72%)}
+.brand-panel:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,transparent 0 29%,rgba(0,0,0,.27) 49%,rgba(0,0,0,.51) 61%,rgba(0,0,0,.1) 82%,transparent 100%)}
+.wordmark{display:flex;align-items:center;justify-content:center;gap:.14em;color:#fff;white-space:nowrap;font-family:"Syne","Manrope",sans-serif;font-size:clamp(38px,4.2vw,64px);font-weight:400;line-height:1;letter-spacing:.07em}
 .wordmark strong{color:var(--red);font-weight:400;letter-spacing:.1em}
 .wordmark b{font-size:.55em;font-weight:300;margin:0 .03em}
 .a-symbol{width:.78em;height:.92em;display:inline-flex;color:#fff}
 .a-symbol svg{width:100%;height:100%;display:block}
-.studio-word{
-  margin-top:17px;text-align:center;color:rgba(255,255,255,.92);
-  font-size:12px;font-weight:500;letter-spacing:.62em;
-}
-.hero-copy h1{
-  margin:28px 0 0;color:#172732;font-family:"Noto Sans KR",sans-serif;
-  font-size:clamp(37px,4vw,59px);font-weight:500;line-height:1.2;letter-spacing:-.055em;
-}
-.hero-copy h1 em{font-style:normal;color:var(--red)}
-.hero-copy p{max-width:570px;margin:17px 0 0;color:#405769;font-family:"Noto Sans KR",sans-serif;font-size:15px;line-height:1.8}
-.hero-actions{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
-.primary-button,.secondary-button{
-  min-height:52px;padding:0 24px;display:inline-flex;align-items:center;justify-content:center;gap:11px;
-  font-family:"Noto Sans KR",sans-serif;font-size:14px;font-weight:600;transition:.25s;
-}
-.primary-button{background:var(--red);color:#fff;box-shadow:0 12px 28px rgba(227,6,19,.22)}
-.primary-button:hover{transform:translateY(-2px);background:#c9000b}
-.secondary-button{background:rgba(255,255,255,.82);border:1px solid rgba(18,35,48,.22);color:#162936;backdrop-filter:blur(8px)}
-.secondary-button span{color:var(--red)}
-.secondary-button:hover{background:#fff;transform:translateY(-2px)}
-.hero-car{
-  position:absolute;z-index:3;right:-1.5vw;bottom:-2vh;width:min(57vw,950px);height:auto;
-  filter:drop-shadow(0 30px 46px rgba(2,9,16,.33));pointer-events:none;
-}
-.scroll-cue{
-  position:absolute;z-index:5;left:50%;bottom:3vh;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:7px;color:#fff;font-size:9px;letter-spacing:.18em;text-shadow:0 1px 7px rgba(0,0,0,.55)
-}
+.studio-word{margin-top:22px;text-align:center;color:rgba(255,255,255,.95);font-size:16px;font-weight:500;letter-spacing:.86em;padding-left:.86em}
+.hero-message{width:min(820px,72vw);margin-top:24px}
+.hero-label{margin:0;color:#20394a;font-family:"Noto Sans KR",sans-serif;font-size:15px;font-weight:600;letter-spacing:.08em}
+.hero-message h1{display:flex;flex-direction:column;align-items:center;gap:4px;margin:13px 0 0;font-family:"Outfit","Noto Sans KR",sans-serif;font-size:clamp(39px,4.2vw,62px);font-weight:400;line-height:1.13;letter-spacing:-.045em}
+.hero-message h1 span{color:#172734}
+.hero-message h1 em{font-style:normal;color:var(--red);font-weight:500;letter-spacing:-.05em}
+.hero-description{margin:15px auto 0;color:#3d5365;font-family:"Noto Sans KR",sans-serif;font-size:14px;line-height:1.75;white-space:nowrap}
+.hero-actions{display:flex;justify-content:center;gap:13px;margin-top:24px}
+.gloss-button{position:relative;isolation:isolate;overflow:hidden;min-width:198px;min-height:55px;padding:0 24px;display:inline-flex;align-items:center;justify-content:center;gap:12px;border-radius:14px;font-family:"Noto Sans KR",sans-serif;font-size:14px;font-weight:600;transition:.25s;box-shadow:0 13px 30px rgba(0,0,0,.17),inset 0 1px 0 rgba(255,255,255,.62),inset 0 -2px 0 rgba(0,0,0,.26)}
+.gloss-button:after{content:"";position:absolute;z-index:-1;width:90%;height:68%;left:-9%;top:-32%;border-radius:0 0 72% 0/0 0 100% 0;background:linear-gradient(155deg,rgba(255,255,255,.84),rgba(255,255,255,.42) 22%,rgba(255,255,255,.1) 50%,transparent 74%)}
+.gloss-button .button-shine{position:absolute;inset:1px;border-radius:13px;border:1px solid rgba(255,255,255,.24);pointer-events:none}
+.gloss-button b,.gloss-button i{position:relative;z-index:2;font-style:normal}
+.primary-button{background:linear-gradient(180deg,#ff2a37 0%,#e30613 58%,#b40009 100%);color:#fff;border:1px solid rgba(255,255,255,.32)}
+.secondary-button{background:linear-gradient(180deg,rgba(255,255,255,.99),rgba(230,238,244,.98) 62%,rgba(198,210,219,.98));color:#162936;border:1px solid rgba(25,47,63,.18)}
+.secondary-button i{color:var(--red)}
+.gloss-button:hover{transform:translateY(-3px) scale(1.01)}
+.hero-car{position:absolute;z-index:3;right:-1vw;bottom:-2.4vh;width:min(58vw,980px);height:auto;filter:drop-shadow(0 31px 48px rgba(2,9,16,.33));pointer-events:none}
+.scroll-cue{position:absolute;z-index:5;left:50%;bottom:2.8vh;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px;color:#fff;font-size:9px;letter-spacing:.18em;text-shadow:0 1px 7px rgba(0,0,0,.55)}
 .scroll-cue i{width:24px;height:40px;border:1px solid rgba(255,255,255,.85);border-radius:14px;position:relative}
 .scroll-cue i:after{content:"";position:absolute;left:50%;top:8px;width:2px;height:7px;background:var(--red);transform:translateX(-50%)}
 
@@ -110,7 +60,7 @@ a{color:inherit;text-decoration:none}
 .section-head>p{max-width:460px;color:#9ba4ae;line-height:1.8}
 .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .work-image{height:320px;background-size:cover;background-position:center}
-.work-image.city{background-image:url("assets/hero-v8-city.webp")}
+.work-image.city{background-image:url("assets/hero-v10-city.webp")}
 .work-image.brandfilm{background:radial-gradient(circle at 50% 35%,#c5ced8,#687689 34%,#141b24 72%)}
 .work-image.product{background:radial-gradient(circle at 65% 40%,#8b1838,#1e2b45 43%,#090d13 77%)}
 .work-card h3{font-size:17px;margin:18px 0 6px}
@@ -139,213 +89,41 @@ footer img{width:185px;filter:brightness(.2)}
 .reveal.visible{opacity:1;transform:none}
 
 @media(max-width:1100px){
-  .hero-content{width:min(690px,57vw)}
-  .brand-panel{width:min(640px,55vw)}
-  .hero-car{width:min(60vw,780px);right:-10vw}
+  .brand-panel{width:min(710px,66vw)}
+  .hero-message{width:min(800px,82vw)}
+  .hero-car{width:min(62vw,800px);right:-10vw}
 }
 @media(max-width:900px){
   .menu-button{display:block;position:relative;z-index:50}
   .nav{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(5,9,15,.97);font-size:18px;opacity:0;pointer-events:none;transition:.25s}
   .nav.open{opacity:1;pointer-events:auto}
-  .hero{min-height:800px}
-  .hero-content{width:100%;padding:118px 5vw 285px;justify-content:flex-start}
+  .hero{min-height:820px}
+  .hero-inner{align-items:flex-start;text-align:left;padding:120px 5vw 300px}
   .brand-panel{width:min(720px,88vw)}
-  .hero-copy h1,.hero-copy p{max-width:68vw}
-  .hero-car{width:min(78vw,700px);right:-15vw;bottom:-2vh}
+  .hero-message{width:100%}
+  .hero-message h1{align-items:flex-start}
+  .hero-description{white-space:normal;margin-left:0}
+  .hero-actions{justify-content:flex-start}
+  .hero-car{width:min(78vw,700px);right:-15vw}
   .about-grid,.work-grid,.service-grid,.process-list{grid-template-columns:1fr}
   .service,.process-list li{border-right:0;border-bottom:1px solid var(--line)}
   .section-head{align-items:flex-start;flex-direction:column}
 }
 @media(max-width:620px){
   .site-header{height:78px;padding:13px 5vw}
-  .brand img{width:165px}
-  .hero{height:auto;min-height:800px}
-  .hero-content{padding:105px 5vw 270px}
-  .hero-label{font-size:13px}
-  .brand-panel{width:90vw;padding:23px 15px 20px;border-radius:19px}
+  .brand img{width:185px}
+  .hero{height:auto;min-height:820px}
+  .hero-inner{padding:105px 5vw 290px}
+  .brand-panel{width:90vw;padding:24px 15px 21px;border-radius:19px}
   .wordmark{font-size:clamp(24px,8vw,39px);gap:.075em;letter-spacing:.025em}
-  .studio-word{font-size:9px;letter-spacing:.46em}
-  .hero-copy h1{max-width:none;font-size:35px;margin-top:24px}
-  .hero-copy p{max-width:none;font-size:14px}
-  .hero-actions{width:100%}
-  .primary-button,.secondary-button{flex:1;padding:0 14px;font-size:13px}
-  .hero-car{width:98vw;right:-22vw;bottom:-1vh}
+  .studio-word{font-size:10px;letter-spacing:.58em;padding-left:.58em}
+  .hero-message h1{font-size:35px}
+  .hero-description{font-size:14px}
+  .hero-actions{width:100%;gap:10px}
+  .gloss-button{flex:1;min-width:0;padding:0 13px;font-size:13px}
+  .hero-car{width:98vw;right:-22vw}
   .scroll-cue{display:none}
   .section{padding:78px 6vw}
   .contact-links{font-size:16px;gap:18px}
   footer{flex-direction:column;text-align:center}
-}
-
-
-/* V9 refinement */
-.hero-city{
-  background-image:url("assets/hero-v9-city.webp");
-  background-position:center 48%;
-  filter:brightness(1.12) saturate(.86) contrast(.92);
-}
-.hero-light{
-  background:
-    linear-gradient(90deg,rgba(238,248,255,.90) 0%,rgba(229,243,252,.66) 30%,rgba(205,229,244,.28) 50%,rgba(4,16,28,.05) 76%),
-    linear-gradient(180deg,rgba(255,255,255,.06),rgba(3,12,20,.17));
-}
-.hero-glass{
-  left:-8vw;width:50vw;
-  background:
-    radial-gradient(circle at 18% 24%,rgba(255,255,255,.66),rgba(255,255,255,.12) 44%,transparent 70%),
-    linear-gradient(135deg,rgba(255,255,255,.23),rgba(255,255,255,.025));
-  opacity:.58;
-}
-.hero-content{
-  width:100%;
-  align-items:center;
-  padding:105px 5vw 80px;
-  text-align:center;
-}
-.hero-label{
-  margin-bottom:15px;
-  color:#20394a;
-}
-.brand-panel{
-  width:min(720px,54vw);
-  padding:33px 46px 29px;
-}
-.studio-word{
-  margin-top:21px;
-  font-size:15px;
-  letter-spacing:.82em;
-  padding-left:.82em;
-}
-.hero-copy{
-  width:min(760px,68vw);
-}
-.hero-copy h1{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:4px;
-  margin-top:29px;
-  font-family:"Space Grotesk","Noto Sans KR",sans-serif;
-  font-size:clamp(39px,4.2vw,62px);
-  font-weight:400;
-  line-height:1.14;
-  letter-spacing:-.045em;
-}
-.hero-copy h1 span{
-  color:#172734;
-  font-weight:400;
-}
-.hero-copy h1 em{
-  color:var(--red);
-  font-style:normal;
-  font-weight:500;
-  letter-spacing:-.05em;
-}
-.hero-copy p{
-  max-width:none;
-  margin:17px auto 0;
-  color:#3c5365;
-  white-space:nowrap;
-  font-size:14px;
-}
-.hero-actions{
-  justify-content:center;
-  margin-top:25px;
-}
-.gloss-button{
-  position:relative;
-  isolation:isolate;
-  overflow:hidden;
-  min-width:190px;
-  min-height:54px;
-  padding:0 24px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-  border-radius:13px;
-  font-family:"Noto Sans KR",sans-serif;
-  font-size:14px;
-  font-weight:600;
-  transition:.25s ease;
-  box-shadow:
-    0 12px 28px rgba(0,0,0,.16),
-    inset 0 1px 0 rgba(255,255,255,.58),
-    inset 0 -2px 0 rgba(0,0,0,.24);
-}
-.gloss-button::before{
-  content:"";
-  position:absolute;
-  z-index:-2;
-  inset:0;
-  border-radius:inherit;
-}
-.gloss-button::after{
-  content:"";
-  position:absolute;
-  z-index:-1;
-  width:88%;
-  height:65%;
-  left:-9%;
-  top:-31%;
-  border-radius:0 0 70% 0 / 0 0 100% 0;
-  background:linear-gradient(
-    155deg,
-    rgba(255,255,255,.82) 0%,
-    rgba(255,255,255,.40) 22%,
-    rgba(255,255,255,.10) 50%,
-    rgba(255,255,255,0) 74%
-  );
-}
-.gloss-button .button-shine{
-  position:absolute;
-  inset:1px;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,.22);
-  pointer-events:none;
-}
-.gloss-button b,.gloss-button i{position:relative;z-index:2;font-style:normal}
-.primary-button{
-  background:linear-gradient(180deg,#ff2936 0%,#e30613 58%,#b50009 100%);
-  color:#fff;
-  border:1px solid rgba(255,255,255,.30);
-}
-.secondary-button{
-  background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(229,237,243,.98) 62%,rgba(197,209,218,.98));
-  color:#162936;
-  border:1px solid rgba(25,47,63,.18);
-}
-.secondary-button i{color:var(--red)}
-.gloss-button:hover{transform:translateY(-3px) scale(1.01)}
-.hero-car{
-  width:min(55vw,920px);
-  right:-1vw;
-  bottom:-2vh;
-}
-@media(max-width:1100px){
-  .brand-panel{width:min(700px,65vw)}
-  .hero-copy{width:min(760px,78vw)}
-  .hero-car{width:min(60vw,760px);right:-10vw}
-}
-@media(max-width:900px){
-  .hero-content{
-    align-items:flex-start;
-    text-align:left;
-    padding:118px 5vw 300px;
-  }
-  .brand-panel{width:min(720px,88vw)}
-  .hero-copy{width:100%}
-  .hero-copy h1{align-items:flex-start}
-  .hero-copy p{white-space:normal;margin-left:0}
-  .hero-actions{justify-content:flex-start}
-  .hero-car{width:min(78vw,700px);right:-15vw}
-}
-@media(max-width:620px){
-  .hero-content{padding:105px 5vw 285px}
-  .brand-panel{width:90vw}
-  .studio-word{font-size:10px;letter-spacing:.58em;padding-left:.58em}
-  .hero-copy h1{font-size:35px}
-  .hero-copy p{font-size:14px}
-  .hero-actions{width:100%;gap:10px}
-  .gloss-button{flex:1;min-width:0;padding:0 13px;font-size:13px}
-  .hero-car{width:98vw;right:-22vw}
 }
