@@ -26,4 +26,15 @@ const works = [
     thumbnail: "assets/works/fusion-tomorrow.jpg?v=20260727-1",
     youtubeId: "6R4xQJToS4g"
   }
+
+,
+  {
+    title: "사람을 잇는 미래의 길",
+    englishTitle: "2050 Korea Future Railway",
+    category: "AI FUTURE RAIL BRAND FILM",
+    year: "2026",
+    description: "철도는 단순한 교통수단을 넘어 사람과 도시, 그리고 미래를 연결하는 길입니다. 2050 대한민국 미래철도를 상상하며 AI 기술과 시네마틱한 영상미로 더 안전하고 지속가능한 이동의 미래를 담아낸 브랜드 필름입니다.",
+    thumbnail: "assets/works/future-rail.jpg?v=20260727-4",
+    youtubeId: "0sD2mJt0sKk"
+  }
 ];
