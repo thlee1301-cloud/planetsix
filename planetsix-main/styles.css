@@ -1,0 +1,280 @@
+
+:root{--red:#e30613;--pink:#ff4f9a;--ink:#10151b;--line:rgba(16,21,27,.13)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:"Manrope","Noto Sans KR",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.site-header{position:absolute;z-index:40;top:0;left:0;width:100%;height:94px;padding:15px 4.5vw;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(4,12,22,.34),rgba(4,12,22,0));transition:.3s}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand img{width:62px;height:62px;object-fit:contain;filter:drop-shadow(0 4px 10px rgba(0,0,0,.24))}
+.brand span{display:flex;flex-direction:column}
+.brand strong{font-family:"Syne",sans-serif;font-size:21px;font-weight:400;letter-spacing:.17em}
+.brand small{margin-top:5px;font-size:9px;letter-spacing:.63em;padding-left:.63em}
+.nav{display:flex;gap:36px;color:#fff;font-size:12px;font-weight:600;letter-spacing:.1em}
+.nav a{position:relative;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.nav a:after{content:"";position:absolute;left:0;bottom:-9px;width:0;height:2px;background:var(--red);transition:.25s}
+.nav a:hover:after{width:100%}
+.menu-button{display:none;background:none;border:0}
+.menu-button span{display:block;width:25px;height:1px;background:#fff;margin:7px}
+.site-header.scrolled{position:fixed;height:72px;background:rgba(4,10,17,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+
+.hero{position:relative;height:100svh;min-height:780px;overflow:hidden;background:#17364d}
+.hero-bg{position:absolute;inset:0;background:url("assets/hero-v15-city.webp") center center/cover no-repeat}
+.hero-tone{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(3,11,20,.08) 58%,rgba(3,10,18,.26)),radial-gradient(circle at 44% 47%,rgba(17,43,65,.04),rgba(3,12,22,.27) 90%)}
+.hero-content{position:relative;z-index:5;height:100%;display:flex;flex-direction:column;align-items:center;padding-top:12.5vh;text-align:center}
+.brand-panel{position:relative;isolation:isolate;overflow:hidden;width:min(585px,44vw);padding:25px 35px 22px;border-radius:21px;background:linear-gradient(180deg,rgba(31,32,35,.98),rgba(3,4,6,.997) 61%,rgba(9,10,12,.99));border:1px solid rgba(255,255,255,.4);box-shadow:0 22px 58px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.54),inset 0 -2px 0 rgba(0,0,0,.85),0 0 0 5px rgba(0,0,0,.15)}
+.brand-panel:before{content:"";position:absolute;z-index:-1;width:78%;height:73%;left:-8%;top:-40%;border-radius:0 0 68% 0/0 0 100% 0;background:linear-gradient(154deg,rgba(255,255,255,.75),rgba(255,255,255,.37) 22%,rgba(255,255,255,.1) 48%,transparent 72%)}
+.brand-panel:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,transparent 0 30%,rgba(0,0,0,.27) 50%,rgba(0,0,0,.5) 62%,rgba(0,0,0,.09) 82%,transparent 100%)}
+.wordmark{display:flex;align-items:center;justify-content:center;gap:.14em;color:#fff;white-space:nowrap;font-family:"Syne","Manrope",sans-serif;font-size:clamp(33px,3.7vw,55px);font-weight:400;line-height:1;letter-spacing:.07em}
+.wordmark strong{color:var(--red);font-weight:400;letter-spacing:.1em}
+.wordmark b{font-size:.55em;font-weight:300;margin:0 .03em}
+.a-symbol{width:.78em;height:.92em;display:inline-flex;color:#fff}
+.a-symbol svg{width:100%;height:100%;display:block}
+.studio-word{margin-top:18px;color:rgba(255,255,255,.97);font-size:15px;font-weight:500;letter-spacing:.86em;padding-left:.86em}
+.hero-message{width:min(800px,66vw);margin-top:24px}
+.hero-label{margin:0;color:#fff;font-size:16px;font-weight:600;letter-spacing:.08em;text-shadow:0 2px 9px rgba(0,0,0,.45)}
+.hero-message h1{display:flex;align-items:baseline;justify-content:center;gap:.22em;margin:13px 0 0;font-family:"Outfit","Noto Sans KR",sans-serif;font-size:clamp(40px,4.5vw,67px);font-weight:400;line-height:1.08;letter-spacing:-.05em}
+.hero-message h1 span{color:#fff;font-weight:300;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.hero-message h1 em{font-style:normal;color:var(--pink);font-weight:600;text-shadow:0 2px 12px rgba(0,0,0,.34)}
+.hero-description{margin:18px auto 0;max-width:760px;color:#fff;font-size:16px;line-height:1.75;text-shadow:0 2px 10px rgba(0,0,0,.52)}
+.hero-actions{display:flex;justify-content:center;gap:15px;margin-top:27px}
+.depth-button{position:relative;isolation:isolate;overflow:hidden;min-width:242px;min-height:62px;padding:0 27px;display:inline-flex;align-items:center;justify-content:center;gap:15px;border-radius:16px;font-size:16px;font-weight:600;transition:.25s ease}
+.depth-button:after{content:"";position:absolute;inset:1px;border-radius:15px;border:1px solid rgba(255,255,255,.27);pointer-events:none}
+.button-gloss{position:absolute;z-index:-1;width:93%;height:72%;left:-9%;top:-36%;border-radius:0 0 72% 0/0 0 100% 0;background:linear-gradient(155deg,rgba(255,255,255,.92),rgba(255,255,255,.48) 22%,rgba(255,255,255,.12) 50%,transparent 76%)}
+.depth-button b,.depth-button i{position:relative;z-index:2;font-style:normal}
+.inquiry-button{color:#fff;border:1px solid rgba(102,159,255,.58);background:linear-gradient(180deg,#123f79 0%,#071f49 55%,#020e28 100%);box-shadow:0 16px 34px rgba(0,0,0,.27),0 0 20px rgba(40,105,245,.22),inset 0 1px 0 rgba(255,255,255,.58),inset 0 -3px 0 rgba(0,0,0,.38)}
+.works-button{color:#fff;border:1px solid rgba(255,255,255,.82);background:linear-gradient(180deg,#fff 0%,#d8e0e6 15%,#939da5 35%,#4a535b 58%,#151a1f 100%);box-shadow:0 18px 38px rgba(0,0,0,.3),0 0 19px rgba(255,255,255,.17),inset 0 2px 0 rgba(255,255,255,.98),inset 0 -4px 0 rgba(0,0,0,.5),inset 0 0 18px rgba(255,255,255,.18)}
+.works-button:before{content:"";position:absolute;left:8%;right:8%;bottom:5px;height:4px;border-radius:50%;background:rgba(0,0,0,.5);filter:blur(3px)}
+.works-button .play{font-size:18px}
+.depth-button:hover{transform:translateY(-3px) scale(1.012);filter:brightness(1.07)}
+.hero-car{position:absolute;z-index:4;right:-1.5vw;bottom:-4.2vh;width:min(52vw,920px);height:auto;filter:drop-shadow(0 31px 48px rgba(2,9,16,.35));pointer-events:none}
+.scroll-cue{position:absolute;z-index:6;left:50%;bottom:2.4vh;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px;color:#fff;font-size:9px;letter-spacing:.18em;text-shadow:0 1px 7px rgba(0,0,0,.55)}
+.scroll-cue>i{width:24px;height:40px;border:1px solid rgba(255,255,255,.85);border-radius:14px;position:relative}
+.scroll-cue>i:after{content:"";position:absolute;left:50%;top:8px;width:2px;height:7px;background:var(--pink);transform:translateX(-50%)}
+.section{padding:108px 6vw}
+.section-kicker,.section-head span,.contact-card>span{font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--red)}
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:10vw;margin-top:38px}
+.about h2,.section-head h2,.contact h2{font-size:clamp(38px,5vw,74px);line-height:1.1;letter-spacing:-.06em;font-weight:400;margin:0}
+.about-copy{font-size:17px;line-height:1.9;color:#4e5862}
+.dark{background:#0d1117;color:#fff}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:54px}
+.section-head h2{margin-top:18px}
+.section-head>a{font-size:12px;letter-spacing:.1em}
+.section-head>p{max-width:460px;color:#9ba4ae;line-height:1.8}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.work-image{height:320px;background-size:cover;background-position:center}
+.work-image.city{background-image:url("assets/hero-v15-city.webp")}
+.work-image.brandfilm{background:radial-gradient(circle at 50% 35%,#c5ced8,#687689 34%,#141b24 72%)}
+.work-image.product{background:radial-gradient(circle at 65% 40%,#8b1838,#1e2b45 43%,#090d13 77%)}
+.work-card h3{font-size:17px;margin:18px 0 6px}
+.work-card p{margin:0;color:#8c96a2;font-size:13px}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:46px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.service{padding:42px 28px 46px;border-right:1px solid var(--line);min-height:240px}
+.service:last-child{border-right:0}
+.service b{color:var(--red);font-size:12px}
+.service h3{font-size:21px;margin:36px 0 14px}
+.service p{color:#66717c;font-size:14px;line-height:1.8}
+.process-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.14)}
+.process-list li{padding:36px 28px;border-right:1px solid rgba(255,255,255,.14)}
+.process-list li:last-child{border-right:0}
+.process-list b{color:var(--red);font-size:12px}
+.process-list h3{font-size:27px;font-weight:400;margin:24px 0 10px}
+.process-list p{color:#8f98a5;font-size:13px;line-height:1.7}
+.contact{background:#f1f3f5;text-align:center}
+.contact-card{max-width:1050px;margin:auto}
+.contact h2{margin:25px 0 36px}
+.contact-links{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;font-size:21px}
+.contact-links a{border-bottom:1px solid #222;padding-bottom:6px}
+.contact-card p{font-size:13px;color:#747982;margin-top:30px}
+footer{padding:30px 5vw;display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid var(--line);font-size:10px;letter-spacing:.09em}
+.footer-brand{display:flex;align-items:center;gap:10px}
+.footer-brand img{width:38px;height:38px;object-fit:contain}
+.footer-brand span{font-family:"Syne",sans-serif;letter-spacing:.12em}
+.reveal{opacity:0;transform:translateY(24px);transition:.8s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+  .menu-button{display:block;position:relative;z-index:50}
+  .nav{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(5,9,15,.97);font-size:18px;opacity:0;pointer-events:none;transition:.25s}
+  .nav.open{opacity:1;pointer-events:auto}
+  .hero{min-height:840px}
+  .hero-bg{background-position:58% center}
+  .brand-panel{width:min(585px,88vw)}
+  .hero-message{width:90vw}
+  .hero-message h1{flex-wrap:wrap}
+  .hero-car{width:min(79vw,700px);right:-15vw;bottom:-2vh}
+  .about-grid,.work-grid,.service-grid,.process-list{grid-template-columns:1fr}
+  .service,.process-list li{border-right:0;border-bottom:1px solid var(--line)}
+  .section-head{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:620px){
+  .site-header{height:78px;padding:10px 5vw}
+  .brand img{width:52px;height:52px}
+  .brand span{display:none}
+  .hero{height:auto;min-height:830px}
+  .hero-content{padding-top:100px}
+  .brand-panel{width:90vw;padding:22px 14px 19px}
+  .wordmark{font-size:clamp(23px,8vw,38px);gap:.07em;letter-spacing:.02em}
+  .studio-word{font-size:10px;letter-spacing:.58em;padding-left:.58em}
+  .hero-message h1{font-size:38px}
+  .hero-description{font-size:14px}
+  .hero-actions{width:90vw;gap:10px}
+  .depth-button{flex:1;min-width:0;min-height:57px;padding:0 12px;font-size:13px}
+  .hero-car{width:100vw;right:-24vw;bottom:-1vh}
+  .scroll-cue{display:none}
+  .section{padding:78px 6vw}
+  .contact-links{font-size:16px;gap:18px}
+  footer{flex-direction:column;text-align:center}
+}
+
+/* PLANET SIX V16 */
+.v16 .hero{height:100svh;min-height:720px;background:#102d4b}
+.v16 .hero-bg.v16-bg{background:url("assets/hero-v16-unified.webp") center/cover no-repeat}
+.v16 .hero-tone,.v16 .hero-content,.v16 .hero-car,.v16 .scroll-cue{display:none}
+.v16 .site-header{background:transparent}
+.v16 .site-header.scrolled{background:rgba(4,10,17,.88)}
+.v16 .site-header .brand{position:absolute;left:4.5vw;top:22px;width:154px;height:108px}
+.v16 .site-header .brand img{position:absolute;left:0;top:0;width:63px;height:63px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,.22))}
+.v16 .site-header .brand span{opacity:0;pointer-events:none}
+.v16 .site-header:not(.scrolled) .nav a{color:transparent;text-shadow:none}
+.v16 .site-header:not(.scrolled) .nav a:after{background:transparent}
+.v16-hotspots{position:absolute;inset:0;z-index:10;pointer-events:none}
+.v16-hotspot{position:absolute;display:block;pointer-events:auto}
+.v16-hotspot.inquiry{left:29.7%;top:62.3%;width:18.8%;height:7.2%}
+.v16-hotspot.works{left:50.2%;top:62.3%;width:18.6%;height:7.2%}
+.v16-hotspot.scroll{left:47.2%;top:86.8%;width:5.6%;height:10.2%}
+@media(max-width:900px){
+ .v16 .site-header:not(.scrolled) .menu-button{display:none}
+ .v16-hotspot.inquiry{left:23%;top:62%;width:26%;height:8%}
+ .v16-hotspot.works{left:51%;top:62%;width:26%;height:8%}
+}
+@media(max-width:620px){
+ .v16 .hero{min-height:760px}
+ .v16 .hero-bg.v16-bg{background-position:center top}
+ .v16 .site-header .brand{left:5vw;top:10px}
+ .v16 .site-header .brand img{width:51px;height:51px}
+}
+
+
+/* =========================================
+   PLANET SIX — FINAL APPROVED HERO
+   ========================================= */
+.final-approved .site-header{
+  display:none;
+}
+.final-approved .final-hero{
+  position:relative;
+  width:100%;
+  height:100svh;
+  min-height:720px;
+  overflow:hidden;
+  background:#0c2947;
+}
+.final-approved .final-hero-image{
+  position:absolute;
+  inset:0;
+  background-image:url("assets/hero-final-approved.png");
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.final-hotspots{
+  position:absolute;
+  inset:0;
+  z-index:10;
+  pointer-events:none;
+}
+.hotspot{
+  position:absolute;
+  display:block;
+  pointer-events:auto;
+  background:transparent;
+}
+
+/* Top navigation positions based on the approved 1536×1024 artwork */
+.hotspot.nav-about{left:54.5%;top:2.1%;width:7%;height:6%}
+.hotspot.nav-works{left:63.3%;top:2.1%;width:7%;height:6%}
+.hotspot.nav-services{left:72.1%;top:2.1%;width:8%;height:6%}
+.hotspot.nav-process{left:81.0%;top:2.1%;width:8%;height:6%}
+.hotspot.nav-contact{left:89.1%;top:2.1%;width:7.5%;height:6%}
+
+/* Main CTAs */
+.hotspot.inquiry{left:28.3%;top:62.0%;width:19.3%;height:8.2%}
+.hotspot.works{left:49.0%;top:62.0%;width:18.0%;height:8.2%}
+.hotspot.scroll{left:46.3%;top:81.0%;width:7.2%;height:13%}
+
+@media(max-width:900px){
+  .final-approved .final-hero{
+    min-height:720px;
+  }
+  .final-approved .final-hero-image{
+    background-position:center top;
+  }
+}
+
+@media(max-width:620px){
+  .final-approved .final-hero{
+    min-height:720px;
+  }
+  .final-approved .final-hero-image{
+    background-size:auto 100%;
+    background-position:center top;
+  }
+  /* Mobile keeps the page viewable; lower sections remain responsive. */
+  .hotspot.nav-about,.hotspot.nav-works,.hotspot.nav-services,
+  .hotspot.nav-process,.hotspot.nav-contact{
+    display:none;
+  }
+  .hotspot.inquiry{left:17%;top:62%;width:31%;height:8%}
+  .hotspot.works{left:50%;top:62%;width:31%;height:8%}
+}
+
+/* =========================================
+   PLANET SIX — APPROVED MEDIUM CENTER IMAGE
+   ========================================= */
+.final-approved .final-hero{
+  position:relative;
+  width:100%;
+  height:100svh;
+  min-height:720px;
+  overflow:hidden;
+  background:#0c2947;
+}
+
+.final-approved .final-hero-image{
+  position:absolute;
+  inset:0;
+  background-image:url("assets/hero-final-approved.png");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+
+/* Click areas aligned to the approved medium composition */
+.hotspot.nav-about{left:55.0%;top:2.0%;width:6.0%;height:6%}
+.hotspot.nav-works{left:62.8%;top:2.0%;width:6.0%;height:6%}
+.hotspot.nav-services{left:70.2%;top:2.0%;width:7.0%;height:6%}
+.hotspot.nav-process{left:77.8%;top:2.0%;width:7.0%;height:6%}
+.hotspot.nav-contact{left:84.8%;top:2.0%;width:6.5%;height:6%}
+
+.hotspot.inquiry{left:32.0%;top:62.5%;width:16.4%;height:8.0%}
+.hotspot.works{left:49.0%;top:62.5%;width:15.7%;height:8.0%}
+.hotspot.scroll{left:47.0%;top:81.0%;width:6.0%;height:13%}
+
+@media(max-width:900px){
+  .final-approved .final-hero-image{
+    background-position:center center;
+  }
+}
+
+@media(max-width:620px){
+  .final-approved .final-hero-image{
+    background-size:auto 100%;
+    background-position:center top;
+  }
+  .hotspot.nav-about,.hotspot.nav-works,.hotspot.nav-services,
+  .hotspot.nav-process,.hotspot.nav-contact{
+    display:none;
+  }
+  .hotspot.inquiry{left:17%;top:63%;width:31%;height:8%}
+  .hotspot.works{left:50%;top:63%;width:31%;height:8%}
+}

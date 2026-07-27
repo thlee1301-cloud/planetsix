@@ -1,0 +1,10 @@
+PLANET SIX STUDIO 최종본
+
+적용 방법
+1. GitHub 저장소 thlee1301-cloud/planetsix 로 이동합니다.
+2. 이 ZIP의 모든 파일과 폴더를 저장소 최상위에 덮어씁니다.
+3. Commit changes를 누릅니다.
+4. GitHub Pages 반영까지 1~3분 정도 기다린 뒤 새로고침합니다.
+
+최종 메인 이미지: assets/hero-final-approved.png
+확인 문구: 기업 홍보 영상, 브랜드 필름, 제품 영상, 공공 캠페인까지
