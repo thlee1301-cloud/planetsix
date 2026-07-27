@@ -1,13 +1,12 @@
 :root{--navy:#071a36;--ink:#111827;--line:#dce3eb;--red:#e31821}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;color:var(--ink);background:#fff}
-.hero{position:relative;width:100%;height:min(58vh,540px);min-height:390px;line-height:0;overflow:hidden;background:#071a36}
-.hero-image{display:block;width:100%;height:100%;max-width:none;object-fit:fill;object-position:center center}
+body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;color:var(--ink);background:#07111f}
+.hero{position:relative;width:100%;height:650px;overflow:hidden;background:#071a36;line-height:0}
+.hero-image{display:block;width:100%;height:100%;object-fit:fill;object-position:center center}
 .click-layer{position:absolute;inset:0;pointer-events:none}
 .hit{position:absolute;display:block;pointer-events:auto;border-radius:10px;outline:none}
 .hit:focus-visible{box-shadow:0 0 0 4px rgba(255,255,255,.95),0 0 0 7px rgba(227,24,33,.95)}
-/* 모든 좌표는 원본 1664×936 이미지에 대한 비율이므로 화면 크기가 달라도 버튼과 정확히 함께 움직입니다. */
 .about-link{left:54.45%;top:4.55%;width:5.75%;height:4.2%}
 .works-nav-link{left:61.15%;top:4.55%;width:5.85%;height:4.2%}
 .services-link{left:68.35%;top:4.55%;width:7.35%;height:4.2%}
@@ -15,29 +14,32 @@ body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;color:var(--ink);backg
 .contact-nav-link{left:84.55%;top:4.55%;width:6.95%;height:4.2%}
 .inquiry-link{left:31.25%;top:67.15%;width:15.45%;height:7.15%}
 .works-button-link{left:48.05%;top:67.15%;width:15.10%;height:7.15%}
-.scroll-link{left:46.7%;top:82.9%;width:4.4%;height:11.0%;border-radius:30px}
-.section{padding:96px clamp(24px,7vw,120px)}
-.section h2{font-size:clamp(34px,5vw,72px);line-height:1.1;margin:12px 0 38px}
+.scroll-link{left:46.7%;top:82.9%;width:4.4%;height:11%;border-radius:30px}
+.section{padding:90px clamp(24px,7vw,120px)}
+.about-section{background:#fff}
+.section h2{font-size:clamp(34px,5vw,70px);line-height:1.1;margin:12px 0 36px}
 .eyebrow{font-size:13px;letter-spacing:.24em;font-weight:700;color:var(--red)}
-.two-col{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
-.two-col p,.cards p,.contact p{font-size:18px;line-height:1.8;color:#5c6674}
+.two-col{display:grid;grid-template-columns:1.1fr 1fr;gap:60px}
+.two-col p,.cards p,.contact p,.work-card p{font-size:18px;line-height:1.8;color:#5c6674}
 .dark{background:#07111f;color:#fff}
-.dark .eyebrow{color:#ff4a51}
 .dark p{color:#aeb8c5}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.cards article{padding:34px;border:1px solid var(--line);border-radius:18px;min-height:220px}
-.dark .cards article{border-color:#26364a;background:#0b1828}
-.cards span{font-size:13px;color:var(--red);font-weight:700}
-.cards h3{font-size:25px;margin:36px 0 10px}
+.cards,.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cards article,.work-card{padding:34px;border:1px solid #dce3eb;border-radius:18px;min-height:210px}
+.dark .cards article,.dark .work-card{border-color:#26364a;background:#0b1828}
+.cards span,.work-card .work-no{font-size:13px;color:var(--red);font-weight:700}
+.cards h3,.work-card h3{font-size:25px;margin:28px 0 10px}
+.work-card{display:flex;flex-direction:column;overflow:hidden;padding:0}
+.work-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;background:#12243a;display:block}
+.work-body{padding:24px}
+.work-link{display:inline-block;margin-top:10px;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5)}
+.work-placeholder{display:grid;place-items:center;color:#8796aa;font-size:14px}
 .contact{background:#eef3f8;text-align:center}
 .contact-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:32px 0}
 .contact-links a,.top-link{display:inline-block;padding:15px 22px;border-radius:999px;text-decoration:none;color:#fff;background:var(--navy)}
 .top-link{margin-top:18px}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(max-width:800px){
-  .hero{height:46vh;min-height:330px}
-  .two-col,.cards{grid-template-columns:1fr}
-  .section{padding:70px 22px}
+@media(max-width:900px){
+  .hero{height:52vw;min-height:360px;max-height:650px}
+  .two-col,.cards,.works-grid{grid-template-columns:1fr}
+  .section{padding:68px 22px}
   .section h2{font-size:38px}
-  .two-col{gap:20px}
 }

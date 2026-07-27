@@ -1,21 +1,13 @@
-
-const menuButton = document.querySelector('.menu-button');
-const nav = document.querySelector('.nav');
-menuButton?.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', String(open));
+const grid = document.getElementById('worksGrid');
+works.forEach((work, index) => {
+  const card = document.createElement('article');
+  card.className = 'work-card';
+  const media = work.thumbnail
+    ? `<img class="work-thumb" src="${work.thumbnail}" alt="${work.title} 썸네일">`
+    : `<div class="work-thumb work-placeholder">썸네일을 넣어주세요</div>`;
+  const link = work.video
+    ? `<a class="work-link" href="${work.video}" target="_blank" rel="noopener">영상 보기 →</a>`
+    : '';
+  card.innerHTML = `${media}<div class="work-body"><span class="work-no">${String(index + 1).padStart(2,'0')} · ${work.category}</span><h3>${work.title}</h3><p>${work.description}</p>${link}</div>`;
+  grid.appendChild(card);
 });
-nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  nav.classList.remove('open');
-  menuButton?.setAttribute('aria-expanded', 'false');
-}));
-const header = document.querySelector('.site-header');
-const updateHeader = () => header?.classList.toggle('scrolled', window.scrollY > 40);
-window.addEventListener('scroll', updateHeader, { passive:true });
-updateHeader();
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, { threshold:.12 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));

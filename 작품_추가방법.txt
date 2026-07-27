@@ -1,0 +1,17 @@
+작품 추가 방법
+
+1. 썸네일 이미지를 assets/works 폴더에 넣습니다.
+   예: jcw-wedding.jpg
+
+2. 영상은 유튜브에 올린 뒤 주소를 복사하거나, mp4 파일을 assets/works 폴더에 넣습니다.
+
+3. works-data.js를 열고 기존 작품 항목 하나를 복사합니다.
+
+4. 아래 네 가지를 바꿉니다.
+   title: 작품 제목
+   category: 작품 종류
+   description: 작품 설명
+   thumbnail: assets/works/파일이름.jpg
+   video: 유튜브 주소 또는 assets/works/파일이름.mp4
+
+5. index.html, styles.css, script.js, works-data.js, assets 폴더를 GitHub 저장소 최상단에 그대로 올립니다.
