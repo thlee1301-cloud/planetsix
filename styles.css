@@ -153,3 +153,74 @@ footer{padding:30px 5vw;display:flex;align-items:center;justify-content:space-be
  .v16 .site-header .brand{left:5vw;top:10px}
  .v16 .site-header .brand img{width:51px;height:51px}
 }
+
+
+/* =========================
+   PLANET SIX V17 corrections
+   ========================= */
+
+/* The selected hero background already contains the top-left logo.
+   Hide only the extra HTML logo while the hero is at the top. */
+.v16 .site-header:not(.scrolled) .brand{
+  display:none !important;
+}
+
+/* Keep the compact brand in the fixed header after scrolling. */
+.v16 .site-header.scrolled .brand{
+  display:flex !important;
+  position:static;
+  width:auto;
+  height:auto;
+}
+.v16 .site-header.scrolled .brand img{
+  position:static;
+  width:46px;
+  height:46px;
+}
+.v16 .site-header.scrolled .brand span{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* Works button play icon:
+   white outlined circle with a white play triangle inside. */
+.v16-hotspot.works::before{
+  content:"";
+  position:absolute;
+  left:17%;
+  top:50%;
+  width:31px;
+  height:31px;
+  border:2px solid rgba(255,255,255,.95);
+  border-radius:50%;
+  transform:translateY(-50%);
+  box-sizing:border-box;
+  filter:drop-shadow(0 1px 3px rgba(0,0,0,.35));
+}
+.v16-hotspot.works::after{
+  content:"";
+  position:absolute;
+  left:calc(17% + 12px);
+  top:50%;
+  transform:translateY(-50%);
+  width:0;
+  height:0;
+  border-top:7px solid transparent;
+  border-bottom:7px solid transparent;
+  border-left:11px solid #fff;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.35));
+}
+
+@media(max-width:620px){
+  .v16-hotspot.works::before{
+    width:25px;
+    height:25px;
+    left:14%;
+  }
+  .v16-hotspot.works::after{
+    left:calc(14% + 10px);
+    border-top-width:6px;
+    border-bottom-width:6px;
+    border-left-width:9px;
+  }
+}
