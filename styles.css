@@ -228,19 +228,24 @@ footer{padding:30px 5vw;display:flex;align-items:center;justify-content:space-be
   .hotspot.works{left:50%;top:62%;width:31%;height:8%}
 }
 
-
 /* =========================================
-   FINAL HERO SIZE ADJUSTMENT v2
-   Keeps full car visible while revealing more at the top.
+   PLANET SIX — 16:9 WIDE HERO FIX
+   Full approved artwork visible; no dark side bars.
    ========================================= */
 .final-approved .final-hero-image{
+  background-image:url("assets/hero-final-approved.png");
   background-size:cover;
-  background-position:center 18px;
+  background-position:center center;
   background-repeat:no-repeat;
 }
 
-@media(max-width:900px){
-  .final-approved .final-hero-image{
-    background-position:center top;
-  }
-}
+/* Hotspots realigned for the new 1920×1080 artwork */
+.hotspot.nav-about{left:53.8%;top:2.1%;width:5.9%;height:6%}
+.hotspot.nav-works{left:61.2%;top:2.1%;width:5.9%;height:6%}
+.hotspot.nav-services{left:68.6%;top:2.1%;width:6.8%;height:6%}
+.hotspot.nav-process{left:76.1%;top:2.1%;width:6.8%;height:6%}
+.hotspot.nav-contact{left:82.9%;top:2.1%;width:6.3%;height:6%}
+
+.hotspot.inquiry{left:31.7%;top:62.0%;width:16.3%;height:8.2%}
+.hotspot.works{left:49.2%;top:62.0%;width:15.2%;height:8.2%}
+.hotspot.scroll{left:46.9%;top:81.0%;width:6.1%;height:13%}
