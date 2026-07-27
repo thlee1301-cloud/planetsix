@@ -125,3 +125,31 @@ footer{padding:30px 5vw;display:flex;align-items:center;justify-content:space-be
   .contact-links{font-size:16px;gap:18px}
   footer{flex-direction:column;text-align:center}
 }
+
+/* PLANET SIX V16 */
+.v16 .hero{height:100svh;min-height:720px;background:#102d4b}
+.v16 .hero-bg.v16-bg{background:url("assets/hero-v16-unified.webp") center/cover no-repeat}
+.v16 .hero-tone,.v16 .hero-content,.v16 .hero-car,.v16 .scroll-cue{display:none}
+.v16 .site-header{background:transparent}
+.v16 .site-header.scrolled{background:rgba(4,10,17,.88)}
+.v16 .site-header .brand{position:absolute;left:4.5vw;top:22px;width:154px;height:108px}
+.v16 .site-header .brand img{position:absolute;left:0;top:0;width:63px;height:63px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,.22))}
+.v16 .site-header .brand span{opacity:0;pointer-events:none}
+.v16 .site-header:not(.scrolled) .nav a{color:transparent;text-shadow:none}
+.v16 .site-header:not(.scrolled) .nav a:after{background:transparent}
+.v16-hotspots{position:absolute;inset:0;z-index:10;pointer-events:none}
+.v16-hotspot{position:absolute;display:block;pointer-events:auto}
+.v16-hotspot.inquiry{left:29.7%;top:62.3%;width:18.8%;height:7.2%}
+.v16-hotspot.works{left:50.2%;top:62.3%;width:18.6%;height:7.2%}
+.v16-hotspot.scroll{left:47.2%;top:86.8%;width:5.6%;height:10.2%}
+@media(max-width:900px){
+ .v16 .site-header:not(.scrolled) .menu-button{display:none}
+ .v16-hotspot.inquiry{left:23%;top:62%;width:26%;height:8%}
+ .v16-hotspot.works{left:51%;top:62%;width:26%;height:8%}
+}
+@media(max-width:620px){
+ .v16 .hero{min-height:760px}
+ .v16 .hero-bg.v16-bg{background-position:center top}
+ .v16 .site-header .brand{left:5vw;top:10px}
+ .v16 .site-header .brand img{width:51px;height:51px}
+}

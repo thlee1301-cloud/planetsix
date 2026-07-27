@@ -10,10 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&family=Syne:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="v16">
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="PLANET SIX STUDIO 홈">
-      <img src="assets/planet-six-symbol-v12.png" alt="">
+      <img src="assets/planet-six-symbol-v16.svg" alt="">
       <span><strong>PLANET·SIX</strong><small>STUDIO</small></span>
     </a>
     <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span></button>
@@ -28,7 +28,7 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-bg v16-bg" aria-hidden="true"></div>
       <div class="hero-tone" aria-hidden="true"></div>
 
       <div class="hero-content">
@@ -62,8 +62,11 @@
         </div>
       </div>
 
-      <img class="hero-car" src="assets/hero-car.webp" alt="" aria-hidden="true">
-      <a class="scroll-cue" href="#about" aria-label="소개 섹션으로 이동"><i></i><span>SCROLL</span></a>
+      <div class="v16-hotspots">
+        <a class="v16-hotspot inquiry" href="#contact" aria-label="영상 제작 문의하기"></a>
+        <a class="v16-hotspot works" href="#works" aria-label="작품 보기"></a>
+        <a class="v16-hotspot scroll" href="#about" aria-label="소개 섹션으로 이동"></a>
+      </div>
     </section>
 
     <section class="section about" id="about">
@@ -126,7 +129,7 @@
   </main>
 
   <footer>
-    <div class="footer-brand"><img src="assets/planet-six-symbol-v12.png" alt=""><span>PLANET·SIX STUDIO</span></div>
+    <div class="footer-brand"><img src="assets/planet-six-symbol-v16.svg" alt=""><span>PLANET·SIX STUDIO</span></div>
     <p>© 2026 PLANET SIX STUDIO. ALL RIGHTS RESERVED.</p>
     <a href="#top">BACK TO TOP ↑</a>
   </footer>
