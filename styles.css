@@ -227,3 +227,40 @@ footer{padding:30px 5vw;display:flex;align-items:center;justify-content:space-be
   .hotspot.inquiry{left:17%;top:62%;width:31%;height:8%}
   .hotspot.works{left:50%;top:62%;width:31%;height:8%}
 }
+
+
+/* =========================================
+   FINAL HERO SIZE ADJUSTMENT
+   ========================================= */
+.final-approved .final-hero{
+  background:#0c2947;
+}
+
+.final-approved .final-hero-image{
+  inset:0;
+  background-size:92% auto;
+  background-position:center top;
+  background-repeat:no-repeat;
+  background-color:#0c2947;
+}
+
+@media(min-width:1200px){
+  .final-approved .final-hero-image{
+    background-size:92% auto;
+    background-position:center top;
+  }
+}
+
+@media(max-width:1199px) and (min-width:901px){
+  .final-approved .final-hero-image{
+    background-size:96% auto;
+    background-position:center top;
+  }
+}
+
+@media(max-width:900px){
+  .final-approved .final-hero-image{
+    background-size:auto 100%;
+    background-position:center top;
+  }
+}
