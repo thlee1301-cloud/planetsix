@@ -447,26 +447,32 @@ a{color:inherit}
 }
 
 
-
-/* === V20 Services readability fix === */
-.services h2,
-.services .section-title,
-.services-title{
-    color:#f5f7fb !important;
-    opacity:1 !important;
-    font-weight:700 !important;
-    text-shadow:0 2px 10px rgba(0,0,0,.25);
+/* === V21: SERVICES 섹션 글자 가독성 정확 수정 === */
+/* 대문(hero)은 전혀 수정하지 않음 */
+#services{
+  background:#07111f;
+  color:#ffffff;
 }
-.services .card h3,
-.service-card h3,
-.services h3{
-    color:#ffffff !important;
-    opacity:1 !important;
-    font-weight:700 !important;
+#services > h2{
+  color:#ffffff !important;
+  opacity:1 !important;
+  font-weight:700 !important;
+  text-shadow:0 2px 12px rgba(0,0,0,.35);
 }
-.services .card p,
-.service-card p,
-.services p{
-    color:#c8d2e0 !important;
-    opacity:1 !important;
+#services .cards article{
+  background:#0b1828;
+  border-color:#9aa8b8;
+}
+#services .cards h3{
+  color:#ffffff !important;
+  opacity:1 !important;
+  font-weight:700 !important;
+}
+#services .cards p{
+  color:#b9c5d3 !important;
+  opacity:1 !important;
+}
+#services .cards span{
+  color:#ff2630 !important;
+  opacity:1 !important;
 }
