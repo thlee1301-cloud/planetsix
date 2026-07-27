@@ -228,10 +228,12 @@ footer{padding:30px 5vw;display:flex;align-items:center;justify-content:space-be
   .hotspot.works{left:50%;top:62%;width:31%;height:8%}
 }
 
+
 /* =========================================
-   PLANET SIX — FULL WIDTH 1920×1080 FIX
-   No blurred side bars; full artwork fills the hero.
+   PLANET SIX — MID-SIZE FINAL HERO
+   For the approved 16:9 hero image.
    ========================================= */
+
 .final-approved .final-hero{
   width:100%;
   height:100svh;
@@ -249,13 +251,39 @@ footer{padding:30px 5vw;display:flex;align-items:center;justify-content:space-be
   background-repeat:no-repeat;
 }
 
-/* Click areas for the 1920×1080 artwork */
-.hotspot.nav-about{left:55.0%;top:2.0%;width:6.0%;height:6%}
-.hotspot.nav-works{left:62.5%;top:2.0%;width:6.0%;height:6%}
-.hotspot.nav-services{left:69.8%;top:2.0%;width:7.0%;height:6%}
-.hotspot.nav-process{left:77.3%;top:2.0%;width:7.0%;height:6%}
-.hotspot.nav-contact{left:84.2%;top:2.0%;width:6.5%;height:6%}
+/* Click areas aligned to the medium-sized center composition */
+.hotspot.nav-about{left:55.5%;top:2.1%;width:5.8%;height:6%}
+.hotspot.nav-works{left:63.0%;top:2.1%;width:5.8%;height:6%}
+.hotspot.nav-services{left:70.3%;top:2.1%;width:6.8%;height:6%}
+.hotspot.nav-process{left:77.8%;top:2.1%;width:6.8%;height:6%}
+.hotspot.nav-contact{left:84.8%;top:2.1%;width:6.5%;height:6%}
 
-.hotspot.inquiry{left:31.0%;top:62.0%;width:17.0%;height:8.5%}
-.hotspot.works{left:49.0%;top:62.0%;width:16.0%;height:8.5%}
-.hotspot.scroll{left:46.8%;top:81.0%;width:6.2%;height:13%}
+/* Main buttons */
+.hotspot.inquiry{left:32.1%;top:66.0%;width:16.2%;height:7.7%}
+.hotspot.works{left:49.2%;top:66.0%;width:15.4%;height:7.7%}
+.hotspot.scroll{left:47.0%;top:82.0%;width:6.0%;height:12%}
+
+@media(max-width:900px){
+  .final-approved .final-hero-image{
+    background-size:cover;
+    background-position:center center;
+  }
+}
+
+@media(max-width:620px){
+  .final-approved .final-hero-image{
+    background-size:auto 100%;
+    background-position:center top;
+  }
+
+  .hotspot.nav-about,
+  .hotspot.nav-works,
+  .hotspot.nav-services,
+  .hotspot.nav-process,
+  .hotspot.nav-contact{
+    display:none;
+  }
+
+  .hotspot.inquiry{left:17%;top:66%;width:31%;height:8%}
+  .hotspot.works{left:50%;top:66%;width:31%;height:8%}
+}
