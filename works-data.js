@@ -57,4 +57,14 @@ const works = [
     thumbnail: "assets/works/immanuel-church.jpg?v=20260727-6",
     youtubeId: "pYvFkHQr1fk"
   }
+,
+  {
+    title: "10년을 담근 깊은 맛",
+    englishTitle: "Woori Farm",
+    category: "AI FOOD BRAND FILM",
+    year: "2026",
+    description: "좋은 된장은 하루아침에 만들어지지 않습니다. 10년의 기다림과 정성, 그리고 자연이 빚어낸 깊은 맛을 시네마틱한 영상미와 AI 기술로 담아낸 브랜드 필름입니다.",
+    thumbnail: "assets/works/woori-farm.jpg?v=20260727-7",
+    youtubeId: "kHojhVs_J9Y"
+  }
 ];
