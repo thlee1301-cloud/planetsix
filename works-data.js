@@ -67,4 +67,14 @@ const works = [
     thumbnail: "assets/works/woori-farm.jpg?v=20260727-7",
     youtubeId: "kHojhVs_J9Y"
   }
+,
+  {
+    title: "도시를 깨우는 빛",
+    englishTitle: "4°C AI",
+    category: "AI TECHNOLOGY BRAND FILM",
+    year: "2026",
+    description: "혁신은 어둠을 밝히는 것에서 시작됩니다. 4°C AI의 기술이 빛을 통해 멈춰 있던 도시에 새로운 생명과 활력을 불어넣는다는 상상을 시네마틱한 영상미와 AI 기술로 구현한 브랜드 필름입니다.",
+    thumbnail: "assets/works/4c-ai-city.jpg?v=20260727-8",
+    youtubeId: "gJlw_saqYdo"
+  }
 ];
