@@ -16,5 +16,14 @@ const works = [
     description: "AI는 기술을 연결하는 것을 넘어 사람과 사람의 마음을 이어주는 도구가 될 수 있습니다. 버려지는 것들 속에서도 새로운 가치를 발견하고, 작은 연결이 희망으로 이어지는 과정을 따뜻한 감성의 스토리텔링으로 표현한 AI 브랜드 필름입니다.",
     thumbnail: "assets/works/kt-connecting-hope.jpg?v=20260727-1",
     youtubeId: "z5U-bVgRG7A"
+  },
+  {
+    title: "Fusion Tomorrow",
+    englishTitle: "Infinite Energy, Infinite Possibilities",
+    category: "AI SCIENCE BRAND FILM",
+    year: "2026",
+    description: "인류가 꿈꿔온 무한 청정에너지는 먼 미래의 이야기가 아니라 오늘의 연구와 도전에서 시작됩니다. 핵융합 기술이 만들어 갈 지속가능한 미래와 새로운 가능성을 시네마틱한 영상으로 담아낸 AI 브랜드 필름입니다.",
+    thumbnail: "assets/works/fusion-tomorrow.jpg?v=20260727-1",
+    youtubeId: "6R4xQJToS4g"
   }
 ];

@@ -1,12 +1,12 @@
-PLANET SIX 두 번째 작품 추가본
+PLANET SIX 세 번째 작품 추가본
 
-중요: 기존 메인 화면 이미지, 자동차, 로고, 중앙 패널 디자인은 전혀 수정하지 않았습니다.
+중요: 기존 메인 화면 이미지, 자동차, 로고, 중앙 패널, 버튼 디자인은 수정하지 않았습니다.
 
 1. 압축을 풉니다.
 2. 안의 모든 파일과 assets 폴더를 GitHub 저장소 첫 화면에 업로드해 덮어씁니다.
 3. 업로드가 끝나면 홈페이지에서 Ctrl + Shift + R을 누릅니다.
 
 추가 작품:
-02. AI가 잇는 희망, 사람을 잇는 KT
-영문: Connecting Hope, Connecting People
-영상: https://youtu.be/z5U-bVgRG7A
+03. Fusion Tomorrow
+부제: Infinite Energy, Infinite Possibilities
+영상: https://youtu.be/6R4xQJToS4g
