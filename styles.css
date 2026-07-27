@@ -229,23 +229,33 @@ footer{padding:30px 5vw;display:flex;align-items:center;justify-content:space-be
 }
 
 /* =========================================
-   PLANET SIX — 16:9 WIDE HERO FIX
-   Full approved artwork visible; no dark side bars.
+   PLANET SIX — FULL WIDTH 1920×1080 FIX
+   No blurred side bars; full artwork fills the hero.
    ========================================= */
+.final-approved .final-hero{
+  width:100%;
+  height:100svh;
+  min-height:720px;
+  overflow:hidden;
+  background:#0c2947;
+}
+
 .final-approved .final-hero-image{
+  position:absolute;
+  inset:0;
   background-image:url("assets/hero-final-approved.png");
   background-size:cover;
   background-position:center center;
   background-repeat:no-repeat;
 }
 
-/* Hotspots realigned for the new 1920×1080 artwork */
-.hotspot.nav-about{left:53.8%;top:2.1%;width:5.9%;height:6%}
-.hotspot.nav-works{left:61.2%;top:2.1%;width:5.9%;height:6%}
-.hotspot.nav-services{left:68.6%;top:2.1%;width:6.8%;height:6%}
-.hotspot.nav-process{left:76.1%;top:2.1%;width:6.8%;height:6%}
-.hotspot.nav-contact{left:82.9%;top:2.1%;width:6.3%;height:6%}
+/* Click areas for the 1920×1080 artwork */
+.hotspot.nav-about{left:55.0%;top:2.0%;width:6.0%;height:6%}
+.hotspot.nav-works{left:62.5%;top:2.0%;width:6.0%;height:6%}
+.hotspot.nav-services{left:69.8%;top:2.0%;width:7.0%;height:6%}
+.hotspot.nav-process{left:77.3%;top:2.0%;width:7.0%;height:6%}
+.hotspot.nav-contact{left:84.2%;top:2.0%;width:6.5%;height:6%}
 
-.hotspot.inquiry{left:31.7%;top:62.0%;width:16.3%;height:8.2%}
-.hotspot.works{left:49.2%;top:62.0%;width:15.2%;height:8.2%}
-.hotspot.scroll{left:46.9%;top:81.0%;width:6.1%;height:13%}
+.hotspot.inquiry{left:31.0%;top:62.0%;width:17.0%;height:8.5%}
+.hotspot.works{left:49.0%;top:62.0%;width:16.0%;height:8.5%}
+.hotspot.scroll{left:46.8%;top:81.0%;width:6.2%;height:13%}
