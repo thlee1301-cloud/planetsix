@@ -47,4 +47,14 @@ const works = [
     thumbnail: "assets/works/4c-ai-cafe.jpg?v=20260727-5",
     youtubeId: "NXyUA8_TDTI"
   }
+,
+  {
+    title: "빛으로 세우다",
+    englishTitle: "Immanuel Church",
+    category: "AI BRAND FILM",
+    year: "2026",
+    description: "믿음은 사람을 세우고 공동체는 세상을 변화시킵니다. 임마누엘교회의 비전과 희망의 메시지를 영화적인 영상미와 AI 기술로 담아낸 브랜드 필름입니다.",
+    thumbnail: "assets/works/immanuel-church.jpg?v=20260727-6",
+    youtubeId: "pYvFkHQr1fk"
+  }
 ];
