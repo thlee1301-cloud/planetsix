@@ -77,4 +77,14 @@ const works = [
     thumbnail: "assets/works/4c-ai-city.jpg?v=20260727-8",
     youtubeId: "gJlw_saqYdo"
   }
+,
+  {
+    title: "Mission: Smile",
+    englishTitle: "AI Medical Brand Film",
+    category: "AI MEDICAL BRAND FILM",
+    year: "2026",
+    description: "보이지 않는 적은 언제나 미소를 노립니다. Mission: Smile은 치아를 위협하는 보이지 않는 적과의 전쟁을 SF 액션 영화처럼 재해석한 AI 브랜드 필름입니다. 첨단 기술로 적을 추적하고 제거하는 과정을 압도적인 시네마틱 연출로 구현하여, 치과 치료를 '미소를 되찾기 위한 마지막 미션'으로 완성했습니다.",
+    thumbnail: "assets/works/mission-smile.jpg?v=20260727-9",
+    youtubeId: "C4Jb2W5-qgQ"
+  }
 ];
