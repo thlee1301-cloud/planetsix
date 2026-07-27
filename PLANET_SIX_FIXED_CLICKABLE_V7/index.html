@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PLANET SIX STUDIO — AI 영상 제작 스튜디오">
+  <title>PLANET SIX STUDIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--red:#e30613;--ink:#10151b;--line:rgba(16,21,27,.13)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#fff;color:var(--ink);font-family:"Manrope","Noto Sans KR",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .hero{position:relative;width:100%;aspect-ratio:16/9;min-height:560px;background:#0c2947;overflow:hidden}
+    .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;z-index:1}
+    .hit{position:absolute;z-index:50;display:block;cursor:pointer;border-radius:14px;background:rgba(255,255,255,0);pointer-events:auto;touch-action:manipulation}
+    .hit:hover,.hit:focus-visible{outline:2px solid rgba(255,255,255,.75);outline-offset:2px;background:rgba(255,255,255,.04)}
+    .hit-about{left:54.6%;top:3.6%;width:6.4%;height:4.6%}
+    .hit-works-nav{left:62.2%;top:3.6%;width:6.7%;height:4.6%}
+    .hit-services{left:69.4%;top:3.6%;width:8.0%;height:4.6%}
+    .hit-process{left:77.8%;top:3.6%;width:7.3%;height:4.6%}
+    .hit-contact-nav{left:85.2%;top:3.6%;width:7.6%;height:4.6%}
+    .hit-contact{left:36.3%;top:59.0%;width:16.5%;height:8.0%}
+    .hit-works{left:54.6%;top:59.0%;width:16.4%;height:8.0%}
+    .hit-scroll{left:47.2%;top:76.4%;width:5.3%;height:11.0%;border-radius:30px}
+    .section{padding:100px 6vw}
+    .section-kicker,.section-head span,.contact-card>span{font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--red)}
+    .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:10vw;margin-top:38px}
+    .about h2,.section-head h2,.contact h2{font-size:clamp(38px,5vw,74px);line-height:1.1;letter-spacing:-.06em;font-weight:400;margin:0}
+    .about-copy{font-size:17px;line-height:1.9;color:#4e5862}
+    .dark{background:#0d1117;color:#fff}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:54px}
+    .section-head h2{margin-top:18px}
+    .section-head>a{font-size:12px;letter-spacing:.1em}
+    .section-head>p{max-width:460px;color:#9ba4ae;line-height:1.8}
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .work-image{height:320px;background-size:cover;background-position:center}
+    .work-image.city{background-image:url("assets/hero-v15-city.webp")}
+    .work-image.brandfilm{background:radial-gradient(circle at 50% 35%,#c5ced8,#687689 34%,#141b24 72%)}
+    .work-image.product{background:radial-gradient(circle at 65% 40%,#8b1838,#1e2b45 43%,#090d13 77%)}
+    .work-card h3{font-size:17px;margin:18px 0 6px}.work-card p{margin:0;color:#8c96a2;font-size:13px}
+    .service-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:46px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .service{padding:42px 28px 46px;border-right:1px solid var(--line);min-height:240px}.service:last-child{border-right:0}.service b{color:var(--red);font-size:12px}.service h3{font-size:21px;margin:36px 0 14px}.service p{color:#66717c;font-size:14px;line-height:1.8}
+    .process-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.14)}
+    .process-list li{padding:36px 28px;border-right:1px solid rgba(255,255,255,.14)}.process-list li:last-child{border-right:0}.process-list b{color:var(--red);font-size:12px}.process-list h3{font-size:27px;font-weight:400;margin:24px 0 10px}.process-list p{color:#8f98a5;font-size:13px;line-height:1.7}
+    .contact{background:#f1f3f5;text-align:center}.contact-card{max-width:1050px;margin:auto}.contact h2{margin:25px 0 36px}.contact-links{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;font-size:21px}.contact-links a{border-bottom:1px solid #222;padding-bottom:6px}.contact-card p{font-size:13px;color:#747982;margin-top:30px}
+    footer{padding:30px 5vw;display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid var(--line);font-size:10px;letter-spacing:.09em}
+    @media(max-width:900px){.hero{min-height:500px}.about-grid,.work-grid,.service-grid,.process-list{grid-template-columns:1fr}.service,.process-list li{border-right:0;border-bottom:1px solid var(--line)}.section-head{align-items:flex-start;flex-direction:column}}
+    @media(max-width:620px){.hero{aspect-ratio:9/13;min-height:720px}.hero-image{object-fit:cover;object-position:center top}.hit-about,.hit-works-nav,.hit-services,.hit-process,.hit-contact-nav{display:none}.hit-contact{left:17%;top:62%;width:31%;height:8%}.hit-works{left:50%;top:62%;width:31%;height:8%}.section{padding:78px 6vw}.contact-links{font-size:16px;gap:18px}footer{flex-direction:column;text-align:center}}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" id="top" aria-label="PLANET SIX STUDIO 메인">
+      <img class="hero-image" src="assets/hero-live-v5.png?v=20260727-7" alt="PLANET SIX STUDIO — 상상을, 새로운 영상으로. 기업 홍보 영상, 브랜드 필름, 제품 영상, 공공 캠페인">
+      <a class="hit hit-about" href="#about" aria-label="ABOUT"></a>
+      <a class="hit hit-works-nav" href="#works" aria-label="WORKS"></a>
+      <a class="hit hit-services" href="#services" aria-label="SERVICES"></a>
+      <a class="hit hit-process" href="#process" aria-label="PROCESS"></a>
+      <a class="hit hit-contact-nav" href="#contact" aria-label="CONTACT"></a>
+      <a class="hit hit-contact" href="#contact" aria-label="영상 제작 문의하기"></a>
+      <a class="hit hit-works" href="#works" aria-label="작품 보기"></a>
+      <a class="hit hit-scroll" href="#about" aria-label="아래로 이동"></a>
+    </section>
+
+    <section class="section about" id="about"><div class="section-kicker">ABOUT PLANET SIX</div><div class="about-grid"><h2>기술을 넘어,<br>이야기를 설계합니다.</h2><div class="about-copy"><p>플래닛식스 스튜디오는 생성형 AI와 영상 연출을 결합해 브랜드가 기억되는 장면을 만듭니다.</p><p>단순히 새로워 보이는 화면이 아니라, 목적과 감정이 분명한 콘텐츠를 제작합니다.</p></div></div></section>
+    <section class="section dark" id="works"><div class="section-head"><div><span>FEATURED WORKS</span><h2>우리가 만든<br>이야기들</h2></div><a href="#contact">프로젝트 문의 →</a></div><div class="work-grid"><article class="work-card"><div class="work-image city"></div><h3>미래도시 프로젝트</h3><p>AI 시네마틱 · 3D 비주얼</p></article><article class="work-card"><div class="work-image brandfilm"></div><h3>브랜드 필름</h3><p>브랜딩 · 감성 스토리텔링</p></article><article class="work-card"><div class="work-image product"></div><h3>제품 홍보 영상</h3><p>제품 · 광고 콘텐츠</p></article></div></section>
+    <section class="section" id="services"><div class="section-kicker">SERVICES</div><div class="service-grid"><article class="service"><b>01</b><h3>AI 영상 제작</h3><p>생성형 AI를 활용한 새로운 영상 콘텐츠</p></article><article class="service"><b>02</b><h3>브랜드 필름</h3><p>브랜드의 가치와 감정을 담는 시네마틱 영상</p></article><article class="service"><b>03</b><h3>제품 영상</h3><p>제품의 디테일과 장점을 효과적으로 전달</p></article><article class="service"><b>04</b><h3>광고 · 홍보</h3><p>메시지를 선명하게 전달하는 맞춤형 콘텐츠</p></article></div></section>
+    <section class="section dark" id="process"><div class="section-head"><div><span>PROCESS</span><h2>아이디어에서<br>완성까지</h2></div><p>기획부터 생성, 연출, 편집과 납품까지 하나의 흐름으로 진행합니다.</p></div><ol class="process-list"><li><b>01</b><h3>Discover</h3><p>브랜드와 목표를 이해합니다.</p></li><li><b>02</b><h3>Design</h3><p>콘셉트와 내러티브를 설계합니다.</p></li><li><b>03</b><h3>Create</h3><p>AI와 연출로 장면을 만듭니다.</p></li><li><b>04</b><h3>Deliver</h3><p>편집과 후반 작업을 거쳐 완성합니다.</p></li></ol></section>
+    <section class="section contact" id="contact"><div class="contact-card"><span>START A PROJECT</span><h2>당신의 다음 장면을<br>함께 만들겠습니다.</h2><div class="contact-links"><a href="tel:01050279599">010-5027-9599</a><a href="mailto:sarahyuk74@gmail.com">sarahyuk74@gmail.com</a></div><p>서울특별시 강남구 일원로 35, 4층 5197호</p></div></section>
+  </main>
+  <footer><span>PLANET·SIX STUDIO</span><p>© 2026 PLANET SIX STUDIO. ALL RIGHTS RESERVED.</p><a href="#top">BACK TO TOP ↑</a></footer>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(function(link){
+      link.addEventListener('click',function(e){
+        var id=this.getAttribute('href');
+        var target=document.querySelector(id);
+        if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'',id);}
+      });
+    });
+  </script>
+</body>
+</html>
