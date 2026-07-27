@@ -3,8 +3,8 @@
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;color:var(--ink);background:#fff}
 .hero{position:relative;width:100%;line-height:0;overflow:hidden;background:#071a36}
-.hero-image{display:block;width:100%;height:auto;max-width:none}
-.click-layer{position:absolute;inset:0;pointer-events:none}
+.hero-image{display:block;width:90%;height:auto;max-width:none;margin:0 auto}
+.click-layer{position:absolute;top:0;left:50%;width:90%;height:100%;transform:translateX(-50%);pointer-events:none}
 .hit{position:absolute;display:block;pointer-events:auto;border-radius:10px;outline:none}
 .hit:focus-visible{box-shadow:0 0 0 4px rgba(255,255,255,.95),0 0 0 7px rgba(227,24,33,.95)}
 /* 모든 좌표는 원본 1664×936 이미지에 대한 비율이므로 화면 크기가 달라도 버튼과 정확히 함께 움직입니다. */
