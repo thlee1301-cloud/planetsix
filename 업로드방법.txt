@@ -1,9 +1,10 @@
-1. 이 ZIP의 압축을 풉니다.
-2. 안에 보이는 index.html, styles.css, script.js, works-data.js, assets 폴더를
-   GitHub 저장소 첫 화면에 그대로 업로드해 기존 파일을 덮어씁니다.
-3. 업로드 후 홈페이지에서 Ctrl + Shift + R을 누릅니다.
+PLANET SIX 첫 작품 업로드본
 
-이번 수정:
-- 왼쪽 위 로고의 검은 사각 배경 제거
-- 중앙 PLANET·SIX / STUDIO 박스에 하이그로시 유광과 입체 그림자 적용
-- 자동차, 배경, 메뉴, 문구, 버튼은 그대로 유지
+1. 압축을 풉니다.
+2. 안에 있는 모든 파일과 assets 폴더를 GitHub 저장소 첫 화면에 업로드하여 덮어씁니다.
+3. 업로드 완료 후 홈페이지에서 Ctrl + Shift + R을 누릅니다.
+
+추가된 작품:
+- 아름다운 선택 (Beautiful Choice)
+- 유튜브 링크: https://youtu.be/6rvvmInEPw0
+- 썸네일 클릭 또는 '영상 보기' 클릭 시 홈페이지 안에서 영상 재생
