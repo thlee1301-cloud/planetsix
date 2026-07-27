@@ -200,3 +200,67 @@ a{color:inherit}
   .hero-content .hero-panel{padding:23px 16px 21px}
   .hero-copy-block{margin-top:15px}
 }
+
+
+/* 2026-07-27 최종 보정: 왼쪽 로고 투명 배경 + 중앙 패널 하이그로시 */
+.brand{
+  width:clamp(138px,10.8vw,210px);
+}
+.brand img{
+  display:block;
+  width:100%;
+  height:auto;
+  background:transparent;
+  filter:
+    drop-shadow(0 2px 1px rgba(255,255,255,.16))
+    drop-shadow(0 7px 13px rgba(0,0,0,.38));
+}
+
+/* 중앙 네모박스: 유광 하이그로시 + 입체 프레임 */
+.hero-content .hero-panel{
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.38);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,.035) 30%,rgba(0,0,0,.09) 54%,rgba(0,0,0,.22) 100%),
+    linear-gradient(145deg,rgba(14,22,32,.95),rgba(4,9,15,.91));
+  box-shadow:
+    0 3px 0 rgba(255,255,255,.12) inset,
+    0 -3px 0 rgba(0,0,0,.5) inset,
+    0 0 0 1px rgba(0,0,0,.28),
+    0 16px 22px rgba(0,0,0,.25),
+    0 31px 64px rgba(0,0,0,.34);
+  backdrop-filter:blur(9px) saturate(118%);
+  -webkit-backdrop-filter:blur(9px) saturate(118%);
+}
+.hero-content .hero-panel::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  left:2.5%;
+  right:2.5%;
+  top:2px;
+  height:48%;
+  border-radius:18px 18px 50% 50%;
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.22) 0%,
+    rgba(255,255,255,.09) 31%,
+    rgba(255,255,255,.015) 100%
+  );
+  pointer-events:none;
+}
+.hero-content .hero-panel::after{
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:0;
+  border-radius:inherit;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.08),transparent 15%,transparent 84%,rgba(255,255,255,.05)),
+    radial-gradient(circle at 28% 0%,rgba(255,255,255,.10),transparent 34%);
+  pointer-events:none;
+}
+.hero-content .hero-panel .wordmark{
+  position:relative;
+  z-index:1;
+}

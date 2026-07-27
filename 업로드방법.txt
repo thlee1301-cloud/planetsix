@@ -1,10 +1,9 @@
-중요: 이 ZIP을 GitHub에 그대로 올리지 마세요.
-1. ZIP 압축을 풉니다.
-2. 안에 바로 보이는 index.html, styles.css, script.js, works-data.js, assets 폴더를 모두 선택합니다.
-3. GitHub 저장소의 첫 화면(root)에 업로드합니다.
-4. Commit changes를 누릅니다.
-5. 2분 후 홈페이지에서 Ctrl+Shift+R을 누릅니다.
+1. 이 ZIP의 압축을 풉니다.
+2. 안에 보이는 index.html, styles.css, script.js, works-data.js, assets 폴더를
+   GitHub 저장소 첫 화면에 그대로 업로드해 기존 파일을 덮어씁니다.
+3. 업로드 후 홈페이지에서 Ctrl + Shift + R을 누릅니다.
 
-확인할 파일:
-assets/hero-city-no-car.png = 새로 만든 자동차 없는 도시 배경
-assets/hero-car-transparent.png = 따로 배치되는 자동차
+이번 수정:
+- 왼쪽 위 로고의 검은 사각 배경 제거
+- 중앙 PLANET·SIX / STUDIO 박스에 하이그로시 유광과 입체 그림자 적용
+- 자동차, 배경, 메뉴, 문구, 버튼은 그대로 유지
