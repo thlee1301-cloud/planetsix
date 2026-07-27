@@ -133,3 +133,70 @@ a{color:inherit}
   .hero-panel{top:20%;width:calc(100% - 30px);padding:24px 16px 22px}
   .hero-car{width:86vw;right:-12vw;bottom:1%;max-height:39%}
 }
+
+/* 2026-07-27 HERO 수정: 검은 박스는 PLANET SIX / STUDIO까지만 */
+.hero-content{
+  position:absolute;
+  z-index:3;
+  left:50%;
+  top:27%;
+  transform:translateX(-50%);
+  width:min(44vw,680px);
+  text-align:center;
+  color:#fff;
+}
+.hero-content .hero-panel{
+  position:relative;
+  left:auto;
+  top:auto;
+  transform:none;
+  width:100%;
+  min-width:0;
+  padding:24px 34px 22px;
+  border-radius:20px;
+}
+.hero-copy-block{
+  margin-top:18px;
+  text-align:center;
+  filter:drop-shadow(0 2px 7px rgba(0,0,0,.45));
+}
+.hero-copy-block .hero-copy{margin-top:0}
+.hero-copy-block .hero-copy-sub{margin-top:7px}
+.hero-copy-block .hero-actions{margin-top:22px}
+
+/* PLANET SIX 하이그로시 광택 효과 */
+.wordmark-main.glossy span,
+.wordmark-main.glossy b{
+  background:linear-gradient(180deg,#fff 0%,#fff 35%,#c8d2dc 53%,#fff 70%,#9ba7b2 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 1px 0 rgba(255,255,255,.55),0 4px 10px rgba(0,0,0,.35);
+}
+.wordmark-main.glossy em{
+  background:linear-gradient(180deg,#ff5a62 0%,#ef252c 42%,#a80007 56%,#ff3039 76%,#b8060d 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 1px 0 rgba(255,160,165,.45),0 4px 10px rgba(0,0,0,.35);
+}
+
+/* 입체 버튼 */
+.button{
+  border-radius:7px;
+  box-shadow:0 7px 0 rgba(2,10,24,.68),0 13px 24px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.45);
+  transform:translateY(0);
+}
+.button:hover{transform:translateY(-2px);box-shadow:0 9px 0 rgba(2,10,24,.68),0 16px 28px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.5)}
+.button:active{transform:translateY(5px);box-shadow:0 2px 0 rgba(2,10,24,.72),0 7px 14px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.35)}
+.button-dark{background:linear-gradient(180deg,#102d56 0%,#071a36 62%,#041126 100%)}
+.button-light{background:linear-gradient(180deg,#fff 0%,#f3f4f6 56%,#d9dde3 100%)}
+
+@media(max-width:1050px){
+  .hero-content{top:27%;width:62vw}
+}
+@media(max-width:760px){
+  .hero-content{top:20%;width:calc(100% - 30px)}
+  .hero-content .hero-panel{padding:23px 16px 21px}
+  .hero-copy-block{margin-top:15px}
+}
