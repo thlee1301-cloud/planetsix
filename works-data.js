@@ -37,4 +37,14 @@ const works = [
     thumbnail: "assets/works/future-rail.jpg?v=20260727-4",
     youtubeId: "0sD2mJt0sKk"
   }
+,
+  {
+    title: "세상이 잠들면 카페가 깨어난다",
+    englishTitle: "4°C AI CAFE",
+    category: "AI BRAND FILM",
+    year: "2026",
+    description: "모두가 잠든 시간에도 누군가에게는 따뜻한 휴식이 필요합니다. 24시간 운영되는 무인카페를 배경으로 AI 기술과 감성적인 영상미를 통해 언제나 열려 있는 공간의 따뜻한 가치를 담아낸 브랜드 필름입니다.",
+    thumbnail: "assets/works/4c-ai-cafe.jpg?v=20260727-5",
+    youtubeId: "NXyUA8_TDTI"
+  }
 ];
