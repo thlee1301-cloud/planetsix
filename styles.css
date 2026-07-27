@@ -2,8 +2,8 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;color:var(--ink);background:#fff}
-.hero{position:relative;width:100%;height:min(78vh,760px);min-height:520px;line-height:0;overflow:hidden;background:#071a36}
-.hero-image{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center center}
+.hero{position:relative;width:100%;height:min(58vh,540px);min-height:390px;line-height:0;overflow:hidden;background:#071a36}
+.hero-image{display:block;width:100%;height:100%;max-width:none;object-fit:fill;object-position:center center}
 .click-layer{position:absolute;inset:0;pointer-events:none}
 .hit{position:absolute;display:block;pointer-events:auto;border-radius:10px;outline:none}
 .hit:focus-visible{box-shadow:0 0 0 4px rgba(255,255,255,.95),0 0 0 7px rgba(227,24,33,.95)}
@@ -35,6 +35,7 @@ body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;color:var(--ink);backg
 .top-link{margin-top:18px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:800px){
+  .hero{height:46vh;min-height:330px}
   .two-col,.cards{grid-template-columns:1fr}
   .section{padding:70px 22px}
   .section h2{font-size:38px}
