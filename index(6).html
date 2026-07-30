@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PLANET SIX STUDIO</title>
+  <link rel="stylesheet" href="styles.css?v=20260727-21">
+</head>
+<body>
+  <main>
+    <section class="hero" id="top" aria-label="PLANET SIX STUDIO 메인 화면">
+      <img class="hero-bg" src="assets/hero-city-no-car.png?v=20260727-2" alt="자동차가 없는 미래도시 배경">
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <a class="brand" href="#top" aria-label="PLANET SIX STUDIO 홈">
+        <img src="assets/planet-six-logo.png?v=20260727-6" alt="PLANET SIX STUDIO 로고">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-controls="heroNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="hero-nav" id="heroNav" aria-label="주요 메뉴">
+        <a href="#about">ABOUT</a>
+        <a href="#works">WORKS</a>
+        <a href="#services">SERVICES</a>
+        <a href="#process">PROCESS</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-panel">
+          <div class="wordmark" aria-label="PLANET SIX STUDIO">
+            <div class="wordmark-main glossy"><span>PLANET</span><b>·</b><em>SIX</em></div>
+            <div class="wordmark-sub">STUDIO</div>
+          </div>
+        </div>
+
+        <div class="hero-copy-block">
+          <p class="hero-copy">AI 영상으로 상상을 현실로</p>
+          <p class="hero-copy hero-copy-sub">브랜드의 스토리를 새로운 감동으로</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#works">작품보기 <span>▶</span></a> 
+           <a class="button button-dark" href="#contact">영상제작 문의하기 <span>▶</span></a>
+          </div>
+        </div>
+      </div>
+
+      <img class="hero-car" src="assets/hero-car-transparent.png?v=20260727-2" alt="미래형 콘셉트 자동차">
+
+      <a class="scroll" href="#about" aria-label="아래로 이동">
+        <span class="mouse"></span>
+        <span>SCROLL</span>
+        <b>⌄</b>
+      </a>
+    </section>
+
+    <section class="section about-section" id="about">
+      <p class="eyebrow">ABOUT PLANET SIX</p>
+      <div class="two-col">
+        <h2>기술을 넘어,<br>이야기를 설계합니다.</h2>
+        <div>
+          <p>플래닛식스 스튜디오는 생성형 AI와 영상 연출을 결합해 브랜드가 기억되는 장면을 만듭니다.</p>
+          <p>기업 홍보 영상, 브랜드 필름, 제품 영상, 공공 캠페인까지 목적과 감정이 분명한 콘텐츠를 제작합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="works">
+      <p class="eyebrow">FEATURED WORKS</p>
+      <h2>우리가 만든 이야기들</h2>
+      <div class="works-grid" id="worksGrid"></div>
+    </section>
+
+    <section class="section" id="services">
+      <p class="eyebrow">SERVICES</p>
+      <h2>영상 제작 서비스</h2>
+      <div class="cards">
+        <article><span>01</span><h3>기업 홍보 영상</h3><p>기업과 기관의 메시지를 명확하게 전달합니다.</p></article>
+        <article><span>02</span><h3>브랜드 필름</h3><p>브랜드의 정체성을 시네마틱하게 표현합니다.</p></article>
+        <article><span>03</span><h3>제품 영상</h3><p>제품의 장점과 디테일을 효과적으로 보여줍니다.</p></article>
+      </div>
+    </section>
+
+    <section class="section dark" id="process">
+      <p class="eyebrow">PROCESS</p>
+      <h2>아이디어에서 완성까지</h2>
+      <div class="cards">
+        <article><span>01</span><h3>Discover</h3><p>목표와 브랜드를 이해합니다.</p></article>
+        <article><span>02</span><h3>Design</h3><p>콘셉트와 내러티브를 설계합니다.</p></article>
+        <article><span>03</span><h3>Create</h3><p>AI와 연출로 장면을 제작합니다.</p></article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <p class="eyebrow">START A PROJECT</p>
+      <h2>당신의 다음 장면을<br>함께 만들겠습니다.</h2>
+      <div class="contact-links">
+        <a href="tel:01050279599">010-5027-9599</a>
+        <a href="mailto:sarahyuk74@gmail.com">sarahyuk74@gmail.com</a>
+      </div>
+      <p>서울특별시 강남구 일원로 35, 4층 5197호</p>
+      <a class="top-link" href="#top">맨 위로 ↑</a>
+    </section>
+  </main>
+  <script src="works-data.js?v=20260727-9"></script>
+  <script src="script.js?v=20260727-1"></script>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const heroNav = document.querySelector('#heroNav');
+
+    if (menuToggle && heroNav) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = heroNav.classList.toggle('is-open');
+        menuToggle.classList.toggle('is-open', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
+      });
+
+      heroNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          heroNav.classList.remove('is-open');
+          menuToggle.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', '메뉴 열기');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
