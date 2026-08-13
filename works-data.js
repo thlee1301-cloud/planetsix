@@ -97,4 +97,15 @@ description: "100여 년 전 한국에 전해진 의료선교의 정신에서 �
 thumbnail: "assets/works/love-comes-first.jpg?v=20260811-1",
 youtubeId: "cAZ0ALQtua4"
 }
+,
+{
+  제목: "PLANET SIX HIGHLIGHT",
+  영어_제목: "PLANET SIX HIGHLIGHT",
+  범주: "AI 하이라이트 영상",
+  년도: "2026년",
+  설명: "PLANET SIX의 AI 영상 작품들을 한 편에 담은 하이라이트 영상입니다.",
+  썸네일: "assets/works/highlight.jpg?v=20260813",
+  유튜브아이디: "UqVOifBoErQ"
+}
+,
 ];
