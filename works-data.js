@@ -94,7 +94,7 @@ englishTitle: "하나님의 위대한 사역 여정",
 category: "AI CINEMATIC FILM",
 year: "2026",
 description: "100여 년 전 한국에 전해진 의료선교의 정신에서 시작해 오늘날 캄보디아로 이어지는 사랑과 헌신의 여정을 생성형 AI와 시네마틱 영상 언어로 재구성한 작품입니다.",
-thumbnail: "assets/works/love comes first.jpg?v=20260813-1",
+thumbnail: "assets/works/love%20comes%20first.jpg?v=20260814-1",
 youtubeId: "cAZ0ALQtua4"
 }
 ,
