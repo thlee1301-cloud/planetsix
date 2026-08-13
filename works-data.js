@@ -107,5 +107,4 @@ youtubeId: "cAZ0ALQtua4"
   썸네일: "assets/works/highlight.jpg?v=20260813",
   유튜브아이디: "UqVOifBoErQ"
 }
-,
 ];
