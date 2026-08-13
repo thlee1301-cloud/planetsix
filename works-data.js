@@ -96,5 +96,14 @@ year: "2026",
 description: "100여 년 전 한국에 전해진 의료선교의 정신에서 시작해 오늘날 캄보디아로 이어지는 사랑과 헌신의 여정을 생성형 AI와 시네마틱 영상 언어로 재구성한 작품입니다.",
 thumbnail: "assets/works/love-comes-first.jpg?v=20260811-1",
 youtubeId: "cAZ0ALQtua4"
+},
+{
+  title: "PLANET SIX HIGHLIGHT",
+  englishTitle: "PLANET SIX HIGHLIGHT",
+  category: "AI HIGHLIGHT FILM",
+  year: "2026",
+  description: "PLANET SIX의 AI 영상 작품들을 한 편에 담은 하이라이트 영상입니다.",
+  thumbnail: "assets/works/highlight.jpg?v=20260813",
+  youtubeId: "UqVOifBoErQ"
 }
 ];
