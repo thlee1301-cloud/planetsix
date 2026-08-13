@@ -99,12 +99,14 @@ youtubeId: "cAZ0ALQtua4"
 }
 ,
 {
-  제목: "PLANET SIX HIGHLIGHT",
-  영어_제목: "PLANET SIX HIGHLIGHT",
-  범주: "AI 하이라이트 영상",
-  년도: "2026년",
-  설명: "PLANET SIX의 AI 영상 작품들을 한 편에 담은 하이라이트 영상입니다.",
-  썸네일: "assets/works/highlight.jpg?v=20260813",
-  유튜브아이디: "UqVOifBoErQ"
+  {
+  title: "PLANET SIX HIGHLIGHT",
+  englishTitle: "PLANET SIX HIGHLIGHT",
+  category: "AI HIGHLIGHT FILM",
+  year: "2026",
+  description: "PLANET SIX의 AI 영상 작품들을 한 편에 담은 하이라이트 영상입니다.",
+  thumbnail: "assets/works/highlight.jpg?v=20260813",
+  youtubeId: "UqVOifBoErQ"
+}
   }
 ];
