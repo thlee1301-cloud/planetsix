@@ -106,5 +106,5 @@ youtubeId: "cAZ0ALQtua4"
   설명: "PLANET SIX의 AI 영상 작품들을 한 편에 담은 하이라이트 영상입니다.",
   썸네일: "assets/works/highlight.jpg?v=20260813",
   유튜브아이디: "UqVOifBoErQ"
-}
+  }
 ];
