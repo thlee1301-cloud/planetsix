@@ -1,13 +1,13 @@
 const works = [
   {
-    제목:"플래닛 식스 하이라이트",
-    영어 제목:"PLANET SIX Highlight",
-    범주:"AI 시네마틱 필름",
-    년도:"2026년",
-    설명:"PLANET SIX의 주요 AI 영상 작품들을 한 편에 담은 새로운 하이라이트 영상입니다.",
-    썸네일:"assets/works/highlight.jpg?v=20260826",
-    유튜브아이디:"dDPtt21avig"
-  }, 
+    title: "플래닛 식스 하이라이트",
+    englishTitle: "PLANET SIX Highlight",
+    category: "AI 시네마틱 필름",
+    year: "2026",
+    description: "PLANET SIX의 주요 AI 영상 작품들을 한 편에 담은 새로운 하이라이트 영상입니다.",
+    thumbnail: "assets/works/highlight.jpg?v=20260826",
+    youtubeId: "dDPtt21avig"
+  },
   {
     title: "아름다운 선택",
     englishTitle: "Beautiful Choice",
