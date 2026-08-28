@@ -105,5 +105,15 @@ const works = [
     description: "100여 년 전 한국에 전해진 의료선교의 정신에서 시작해 오늘날 캄보디아로 이어지는 사랑과 헌신의 여정을 생성형 AI와 시네마틱 영상 언어로 재구성한 작품입니다.",
     thumbnail: "assets/works/love%20comes%20first.jpg?v=20260814-1",
     youtubeId: "cAZ0ALQtua4"
+
+  {
+  title: "DB손해보험 자동차 사고 시 대처요령",
+  englishTitle: "DB Insurance – What to Do After a Car Accident",
+  category: "AI BRAND INFORMATION FILM",
+  year: "2026",
+  description: "생성형 AI 기반의 캐릭터 애니메이션과 모션그래픽을 활용하여 자동차 사고 발생 시 필요한 대처 절차를 쉽고 직관적으로 전달한 브랜드 인포메이션 영상입니다. 사고 직후 안전 확보부터 인명 확인, 현장 기록, 상대방 정보 확인, 보험사 사고 접수까지의 과정을 친근하고 명확하게 구성했습니다.",
+  thumbnail: "assets/works/db-insurance.jpg?v=20260828",
+  youtubeId: "nH_Xuh1LWPQ"
+},
 }
 ];
