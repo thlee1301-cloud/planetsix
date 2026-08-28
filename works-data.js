@@ -116,5 +116,4 @@ const works = [
   thumbnail: "assets/works/db-insurance.jpg?v=20260828",
   youtubeId: "nH_Xuh1LWPQ"
 },
-}
 ];
