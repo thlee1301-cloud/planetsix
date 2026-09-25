@@ -40,12 +40,22 @@ modal.innerHTML = `
   </section>
 `;
 document.body.appendChild(modal);
+const heroVideo = document.getElementById('heroVideo');
 
+function enableHeroSound() {
+  if (!heroVideo) return;
+  heroVideo.muted = false;
+  heroVideo.volume = 1;
+  heroVideo.play().catch(() => {});
+}
+
+document.addEventListener('click', enableHeroSound, { once: true });
 const frame = modal.querySelector('.video-frame');
 const caption = modal.querySelector('.video-modal-caption');
 const closeButton = modal.querySelector('.video-modal-close');
 
 function openVideo(work) {
+  if (heroVideo) heroVideo.muted = true;
   frame.src = `https://www.youtube.com/embed/${work.youtubeId}?autoplay=1&rel=0`;
   caption.innerHTML = `<strong>${work.title}</strong><span>${work.englishTitle}</span>`;
   modal.classList.add('is-open');
@@ -59,6 +69,12 @@ function closeVideo() {
   modal.setAttribute('aria-hidden', 'true');
   frame.src = '';
   document.body.classList.remove('modal-open');
+
+  if (heroVideo) {
+    heroVideo.muted = false;
+    heroVideo.play().catch(() => {});
+  }
+}
 }
 
 closeButton.addEventListener('click', closeVideo);
