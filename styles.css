@@ -571,4 +571,7 @@ a{color:inherit}
     outline:none;
   }
 }
-
+.hero-panel{
+  background: transparent !important;
+  box-shadow: none !important;
+}
