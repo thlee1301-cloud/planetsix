@@ -586,6 +586,6 @@ border: none !important;
     letter-spacing: 0.70em !important;
 }
 .hero-panel{
-  width: calc(min(50vw, 760px) + 60px) !important;
-  margin-left: -30px !important;
+  width: calc(min(50vw, 760px) + 120px) !important;
+  margin-left: -60px !important;
 }
