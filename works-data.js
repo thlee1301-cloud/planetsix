@@ -1,4 +1,13 @@
 const works = [
+    {
+    title: "USC예인치과병원 홍보영상",
+    englishTitle: "USC Yein Dental Hospital",
+    category: "DENTAL HOSPITAL PROMOTIONAL FILM",
+    year: "2026",
+    description: "USC예인치과병원의 진료 철학과 전문적인 치과 치료 과정을 소개합니다. 환자 한 분 한 분을 위한 세심한 진단부터 치료까지, 실제 진료 과정을 영상에 담았습니다.",
+    thumbnail: "https://img.youtube.com/vi/ynkHcPm93D4/maxresdefault.jpg",
+    youtubeId: "ynkHcPm93D4"
+  },
   {
     title: "플래닛 식스 하이라이트",
     englishTitle: "PLANET SIX Highlight",
