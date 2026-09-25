@@ -575,4 +575,6 @@ a{color:inherit}
   background: transparent !important;
   box-shadow: none !important;
   backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+border: none !important;
 }
