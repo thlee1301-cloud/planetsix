@@ -574,4 +574,5 @@ a{color:inherit}
 .hero-panel{
   background: transparent !important;
   box-shadow: none !important;
+  backdrop-filter: none !important;
 }
