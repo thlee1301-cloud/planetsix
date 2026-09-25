@@ -39,28 +39,13 @@ modal.innerHTML = `
     <div class="video-modal-caption"></div>
   </section>
 `;
-function enableHeroSound() {
-  if (!heroVideo) return;
+document.body.appendChild(modal);
 
-  heroVideo.muted = false;
-  heroVideo.defaultMuted = false;
-  heroVideo.volume = 1.0;
-
-  const playPromise = heroVideo.play();
-  if (playPromise !== undefined) {
-    playPromise.catch(error => console.log(error));
-  }
-}
-
-document.addEventListener('pointerdown', enableHeroSound);
-document.addEventListener('click', enableHeroSound);
-document.addEventListener('keydown', enableHeroSound);
 const frame = modal.querySelector('.video-frame');
 const caption = modal.querySelector('.video-modal-caption');
 const closeButton = modal.querySelector('.video-modal-close');
 
 function openVideo(work) {
-  if (heroVideo) heroVideo.muted = true;
   frame.src = `https://www.youtube.com/embed/${work.youtubeId}?autoplay=1&rel=0`;
   caption.innerHTML = `<strong>${work.title}</strong><span>${work.englishTitle}</span>`;
   modal.classList.add('is-open');
@@ -74,12 +59,6 @@ function closeVideo() {
   modal.setAttribute('aria-hidden', 'true');
   frame.src = '';
   document.body.classList.remove('modal-open');
-
-  if (heroVideo) {
-    heroVideo.muted = false;
-    heroVideo.play().catch(() => {});
-  }
-}
 }
 
 closeButton.addEventListener('click', closeVideo);
