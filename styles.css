@@ -578,3 +578,6 @@ a{color:inherit}
   -webkit-backdrop-filter: none !important;
 border: none !important;
 }
+.wordmark-main{
+  letter-spacing: .45em !important;
+}
