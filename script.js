@@ -39,17 +39,22 @@ modal.innerHTML = `
     <div class="video-modal-caption"></div>
   </section>
 `;
-document.body.appendChild(modal);
-const heroVideo = document.getElementById('heroVideo');
-
 function enableHeroSound() {
   if (!heroVideo) return;
+
   heroVideo.muted = false;
-  heroVideo.volume = 1;
-  heroVideo.play().catch(() => {});
+  heroVideo.defaultMuted = false;
+  heroVideo.volume = 1.0;
+
+  const playPromise = heroVideo.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(error => console.log(error));
+  }
 }
 
-document.addEventListener('click', enableHeroSound, { once: true });
+document.addEventListener('pointerdown', enableHeroSound);
+document.addEventListener('click', enableHeroSound);
+document.addEventListener('keydown', enableHeroSound);
 const frame = modal.querySelector('.video-frame');
 const caption = modal.querySelector('.video-modal-caption');
 const closeButton = modal.querySelector('.video-modal-close');
