@@ -5,7 +5,7 @@ const works = [
     category: "DENTAL HOSPITAL PROMOTIONAL FILM",
     year: "2026",
     description: "USC예인치과병원의 진료 철학과 전문적인 치과 치료 과정을 소개합니다. 환자 한 분 한 분을 위한 세심한 진단부터 치료까지, 실제 진료 과정을 영상에 담았습니다.",
-    thumbnail: "https://img.youtube.com/vi/ynkHcPm93D4/maxresdefault.jpg",
+    thumbnail: "assets/works/마지막도전.mp4_000027041.png",
     youtubeId: "ynkHcPm93D4"
   },
   {
