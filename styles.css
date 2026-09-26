@@ -620,4 +620,8 @@ border: none !important;
   top: calc(50% + 35px) !important;
   transform: translate(-50%, -50%) !important;
 }
+@media (max-width: 768px) {
+  .brand {
+    top: 8px !important;
+  }
 }
