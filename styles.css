@@ -128,7 +128,7 @@ a{color:inherit}
   .hero-car{width:53vw;right:-1vw;bottom:0;max-height:44%}
 }
 @media(max-width:760px){
-  .hero{height:540px;min-height:540px}
+  .hero{height:500px;min-height:500px}
   .hero-bg{object-position:center center}
   .hero-panel{top:20%;width:calc(100% - 30px);padding:24px 16px 22px}
   .hero-car{width:86vw;right:-12vw;bottom:1%;max-height:39%}
