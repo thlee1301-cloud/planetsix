@@ -65,6 +65,6 @@ closeButton.addEventListener('click', closeVideo);
 modal.querySelector('.video-modal-backdrop').addEventListener('click', closeVideo);
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && modal.classList.contains('is-open')) closeVideo();
-}
+});
                          
 
