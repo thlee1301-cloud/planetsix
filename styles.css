@@ -643,8 +643,7 @@ border: none !important;
   justify-content: center;
   backdrop-filter: blur(6px);
 }
-
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
   .sound-toggle {
     right: 16px;
     bottom: 20px;
@@ -653,4 +652,14 @@ border: none !important;
     font-size: 19px;
   }
 }
+
+@media (min-width: 769px) {
+  .sound-toggle {
+    position: absolute !important;
+    right: 30px !important;
+    bottom: 30px !important;
+    z-index: 9999 !important;
+    display: flex !important;
+  }
 }
+
