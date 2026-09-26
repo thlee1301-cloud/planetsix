@@ -609,12 +609,7 @@ min-height: 720px !important;
     top: 42% !important;
     transform: translateX(-50%) !important;
   }
-    .wordmark-main {
-  font-size: 28px !important;
-  letter-spacing: .08em !important;
-  white-space: nowrap !important;
-}
-
+ 
   .hero-bg {
   width: 120% !important;
   height: 120% !important;
@@ -679,4 +674,11 @@ min-height: 720px !important;
   font-size: 21px !important;
   align-items: center !important;
   justify-content: center !important;
+}
+@media (max-width: 768px) {
+  .wordmark-main {
+    font-size: 28px !important;
+    letter-spacing: 0.08em !important;
+    white-space: nowrap !important;
+  }
 }
