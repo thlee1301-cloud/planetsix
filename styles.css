@@ -597,4 +597,18 @@ border: none !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
   }
+  @media (max-width: 768px) {
+  .hero-panel {
+    width: 92% !important;
+    margin-left: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .hero-bg {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+}
 }
