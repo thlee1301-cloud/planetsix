@@ -50,6 +50,19 @@
       .menu-toggle{display:none !important;}
       #heroNav.hero-nav{display:flex !important;}
     }
+    @media (max-width: 768px) {
+  #soundToggle {
+    position: absolute !important;
+    right: 16px !important;
+    top: auto !important;
+    bottom: 20px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    font-size: 19px !important;
+  }
+}
   </style>
 </head>
 <body>
@@ -209,7 +222,7 @@ if (heroVideo && soundToggle) {
     heroVideo.muted = !heroVideo.muted;
 
     if (heroVideo.muted) {
-    soundToggle.textContent = '🔇';
+   soundToggle.textContent = '🔇';
     } else {
 soundToggle.textContent = '🔊';
     }
