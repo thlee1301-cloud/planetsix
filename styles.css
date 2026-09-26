@@ -590,8 +590,8 @@ border: none !important;
 @media (max-width: 768px) {
 
   .hero {
-  height: calc(100svh - 20px) !important;
-  min-height: 0 !important;
+  height: 720px !important;
+min-height: 720px !important;
 }
   }
   .hero-panel {
