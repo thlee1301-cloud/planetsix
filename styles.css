@@ -658,7 +658,7 @@ border: none !important;
 @media (min-width: 769px) {
   .sound-toggle {
     position: fixed !important;
-    right: 60px !important;
+    right: 20px !important;
     top: 120px !important;
     z-index: 999999 !important;
     display: flex !important;
