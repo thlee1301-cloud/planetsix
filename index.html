@@ -209,11 +209,9 @@ if (heroVideo && soundToggle) {
     heroVideo.muted = !heroVideo.muted;
 
     if (heroVideo.muted) {
-      soundToggle.innerHTML = '<svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m16 9 5 5"/><path d="m21 9-5 5"/></svg>';
-      soundToggle.setAttribute('aria-label', '소리 켜기');
+      soundToggle.innerHTML = '<span style="display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Arial,sans-serif;line-height:1;"><span style="font-size:10px;letter-spacing:1.2px;font-weight:500;">SOUND</span><span style="font-size:15px;font-weight:600;margin-top:5px;">OFF</span></span>';
     } else {
-soundToggle.innerHTML = '<svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 6 7 9H4v6h3l4 3V6Z"/><path d="M15.5 9.5c1.3 1.4 1.3 3.6 0 5"/></svg>';
-      heroVideo.play();
+soundToggle.innerHTML = '<span style="display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Arial,sans-serif;line-height:1;"><span style="font-size:10px;letter-spacing:1.2px;font-weight:500;">SOUND</span><span style="font-size:15px;font-weight:600;margin-top:5px;">ON</span></span>';
     }
   });
 }
