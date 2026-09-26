@@ -209,10 +209,10 @@ if (heroVideo && soundToggle) {
     heroVideo.muted = !heroVideo.muted;
 
     if (heroVideo.muted) {
-      soundToggle.innerHTML = '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m16 9 5 5"/><path d="m21 9-5 5"/></svg>';
+      soundToggle.innerHTML = '<svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m16 9 5 5"/><path d="m21 9-5 5"/></svg>';
       soundToggle.setAttribute('aria-label', '소리 켜기');
     } else {
-soundToggle.innerHTML = '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a8 8 0 0 1 0 12"/></svg>';
+soundToggle.innerHTML = '<svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a8 8 0 0 1 0 12"/></svg>';
       soundToggle.setAttribute('aria-label', '소리 끄기');
       heroVideo.play();
     }
