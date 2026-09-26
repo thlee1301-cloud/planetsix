@@ -596,6 +596,7 @@ border: none !important;
   height: calc(100svh - 20px) !important;
   min-height: 0 !important;
 }
+  }
   .hero-panel {
     width: 92% !important;
     margin-left: 0 !important;
