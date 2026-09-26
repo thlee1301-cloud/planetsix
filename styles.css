@@ -603,6 +603,7 @@ border: none !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
   }
+  }
   @media (max-width: 768px) {
   .hero-panel {
     width: 92% !important;
