@@ -616,7 +616,7 @@ border: none !important;
   max-width: none !important;
   object-fit: contain !important;
   left: 50% !important;
-  top: calc(50% + 35px) !important;
+  top: calc(50% + 100px) !important;
   transform: translate(-50%, -50%) !important;
 }
 @media (max-width: 768px) {
