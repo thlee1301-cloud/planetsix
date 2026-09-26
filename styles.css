@@ -602,7 +602,7 @@ border: none !important;
     width: 92% !important;
     margin-left: 0 !important;
     left: 50% !important;
-    transform: translateX(-50%) !important;
+    transform: translate(-50%, -50%) !important;
   }
 
   .hero-bg {
@@ -613,7 +613,5 @@ border: none !important;
   left: 50% !important;
   top: 50% !important;
   transform: translate(-50%, -50%) !important;
-}
-  }
 }
 }
