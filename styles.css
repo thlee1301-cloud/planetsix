@@ -585,9 +585,6 @@ border: none !important;
 .wordmark-main em {
     letter-spacing: 0.70em !important;
 }
-.hero-panel{
-  width: calc(min(50vw, 760px) + 120px) !important;
-  margin-left: -60px !important;
 }
 
 @media (max-width: 768px) {
