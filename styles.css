@@ -590,7 +590,7 @@ border: none !important;
 @media (max-width: 768px) {
 
   .hero {
-  height: calc(100dvh - 20px) !important;
+  height: calc(100svh - 20px) !important;
   min-height: 0 !important;
 }
   }
