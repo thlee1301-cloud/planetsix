@@ -209,9 +209,9 @@ if (heroVideo && soundToggle) {
     heroVideo.muted = !heroVideo.muted;
 
     if (heroVideo.muted) {
-      soundToggle.innerHTML = '<span style="display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Arial,sans-serif;line-height:1;"><span style="font-size:10px;letter-spacing:1.2px;font-weight:500;">SOUND</span><span style="font-size:15px;font-weight:600;margin-top:5px;">OFF</span></span>';
+    soundToggle.textContent = '🔇';
     } else {
-soundToggle.innerHTML = '<span style="display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Arial,sans-serif;line-height:1;"><span style="font-size:10px;letter-spacing:1.2px;font-weight:500;">SOUND</span><span style="font-size:15px;font-weight:600;margin-top:5px;">ON</span></span>';
+soundToggle.textContent = '🔊';
     }
   });
 }
