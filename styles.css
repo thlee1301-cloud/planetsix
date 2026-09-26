@@ -93,7 +93,7 @@ a{color:inherit}
   left:50%;
   top:27%;
   transform:translateX(-50%);
-  width:min(50vw,760px);
+  width:min(46vw,660px);
   padding:25px 34px 24px;
   border:1px solid rgba(255,255,255,.25);
   border-radius:20px;
