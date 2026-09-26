@@ -589,3 +589,12 @@ border: none !important;
   width: calc(min(50vw, 760px) + 120px) !important;
   margin-left: -60px !important;
 }
+
+@media (max-width: 768px) {
+  .hero-panel {
+    width: 92% !important;
+    margin-left: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
