@@ -623,5 +623,6 @@ border: none !important;
 @media (max-width: 768px) {
   .brand {
     top: 8px !important;
+    width: 105px !important;
   }
 }
