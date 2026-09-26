@@ -611,8 +611,8 @@ border: none !important;
   }
 
   .hero-bg {
-  width: 100% !important;
-  height: 100% !important;
+  width: 120% !important;
+  height: 120% !important;
   max-width: none !important;
   object-fit: contain !important;
   left: 50% !important;
