@@ -65,4 +65,21 @@ closeButton.addEventListener('click', closeVideo);
 modal.querySelector('.video-modal-backdrop').addEventListener('click', closeVideo);
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && modal.classList.contains('is-open')) closeVideo();
-});
+}
+                         const heroVideo = document.getElementById('heroVideo');
+const soundToggle = document.getElementById('soundToggle');
+
+if (heroVideo && soundToggle) {
+  soundToggle.addEventListener('click', () => {
+    heroVideo.muted = !heroVideo.muted;
+
+    if (heroVideo.muted) {
+      soundToggle.textContent = '🔇';
+      soundToggle.setAttribute('aria-label', '소리 켜기');
+    } else {
+      soundToggle.textContent = '🔊';
+      soundToggle.setAttribute('aria-label', '소리 끄기');
+      heroVideo.play();
+    }
+  });
+
