@@ -591,6 +591,11 @@ border: none !important;
 }
 
 @media (max-width: 768px) {
+
+  .hero {
+  height: calc(100svh - 145px) !important;
+  min-height: 0 !important;
+}
   .hero-panel {
     width: 92% !important;
     margin-left: 0 !important;
