@@ -251,6 +251,7 @@ a{color:inherit}
 }
 .hero-content .hero-panel::after{
   content:"";
+  display: none !important;
   position:absolute;
   z-index:0;
   inset:0;
