@@ -167,6 +167,7 @@ a{color:inherit}
 /* PLANET SIX 하이그로시 광택 효과 */
 .wordmark-main.glossy span,
 .wordmark-main.glossy b{
+  letter-spacing: 0.16em;
   background:linear-gradient(180deg,#fff 0%,#fff 35%,#c8d2dc 53%,#fff 70%,#9ba7b2 100%);
   -webkit-background-clip:text;
   background-clip:text;
