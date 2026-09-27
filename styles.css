@@ -53,7 +53,7 @@ a{color:inherit}
   .brand{width:128px;left:20px;top:20px}
   .hero-nav{right:18px;top:26px;gap:14px}.hero-nav a{font-size:11px}.hero-nav a:nth-child(3),.hero-nav a:nth-child(4){display:none}
   .hero-panel{top:21%;width:calc(100% - 32px);padding:28px 18px 26px;border-radius:18px}
-  .wordmark-main{font-size:34px;letter-spacing:.13em}.wordmark-main em{letter-spacing:.10em}.wordmark-sub{font-size:15px;letter-spacing:.72em;padding-left:.72em;margin-top:14px}
+  .wordmark-main{font-size:34px;letter-spacing:.08em}.wordmark-main em{letter-spacing:.10em}.wordmark-sub{font-size:15px;letter-spacing:.72em;padding-left:.72em;margin-top:14px}
   .hero-copy{font-size:16px;letter-spacing:.06em;margin-top:25px}.hero-copy-sub{margin-top:8px}
   .hero-actions{gap:10px;margin-top:22px}.button{width:50%;height:52px;font-size:15px;gap:10px}
   .hero-car{width:88vw;right:-18vw;bottom:1%}
