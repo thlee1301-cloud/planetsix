@@ -103,7 +103,7 @@ a{color:inherit}
   box-shadow:0 20px 48px rgba(0,0,0,.28);
   backdrop-filter:blur(5px);
 }
-.wordmark-main{font-size:clamp(36px,3.35vw,55px);letter-spacing:.11em;position:relative;left:6px}
+.wordmark-main{font-size:clamp(36px,3.35vw,55px);letter-spacing:.13em;position:relative;left:6px}
 .wordmark-sub{margin-top:14px;font-size:clamp(14px,1.2vw,20px);letter-spacing:.9em;padding-left:.9em}
 .hero-copy{margin-top:22px;font-size:clamp(15px,1.15vw,19px)}
 .hero-copy-sub{margin-top:7px}
