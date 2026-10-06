@@ -100,6 +100,18 @@
     .wordmark-main em {
   letter-spacing: 10px !important;
 }
+}
+  </style>
+
+  <style>
+    #showreelSection {position:relative;width:100%;padding:0;margin:0;background:#000;isolation:isolate;}
+    #showreelSection .showreel-screen {position:relative;width:100%;aspect-ratio:16/9;min-height:200px;}
+    #showreelPlayer {position:absolute;inset:0;display:block;width:100%;height:100%;border:0;}
+    #showreelSound {position:absolute;right:16px;bottom:16px;z-index:2;width:48px;height:48px;padding:0;border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(0,0,0,.5);color:#fff;font-size:23px;display:flex;align-items:center;justify-content:center;cursor:pointer;}
+    #showreelSound:disabled {opacity:.5;cursor:wait;}
+    #showreelSound:focus-visible {outline:3px solid #fff;outline-offset:3px;}
+    #showreelStatus {position:absolute;left:16px;bottom:16px;z-index:2;margin:0;color:#fff;background:rgba(0,0,0,.65);padding:8px 12px;font-size:14px;}
+    #showreelStatus[hidden] {display:none;}
   </style>
 </head>
 <body>
@@ -152,6 +164,18 @@
         <span>SCROLL</span>
         <b>⌄</b>
       </a>
+    </section>
+
+
+    <section id="showreelSection" aria-label="PLANET SIX STUDIO AI 쇼릴">
+      <div class="showreel-screen">
+        <iframe id="showreelPlayer" title="PLANET SIX STUDIO AI 시네마틱 쇼릴"
+          src="https://www.youtube.com/embed/zZ0t8Ic-n70?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=zZ0t8Ic-n70&amp;playsinline=1&amp;controls=1&amp;rel=0&amp;enablejsapi=1"
+          allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <button id="showreelSound" type="button" aria-label="쇼릴 소리 켜기" aria-pressed="false" disabled>🔇</button>
+        <p id="showreelStatus" role="status" hidden></p>
+      </div>
     </section>
 
     <section class="section about-section" id="about">
@@ -251,21 +275,69 @@
       });
 
       window.addEventListener('resize', applyMobileMenuState);
-      const heroVideo = document.getElementById('heroVideo');
-const soundToggle = document.getElementById('soundToggle');
 
-if (heroVideo && soundToggle) {
-  soundToggle.addEventListener('click', function () {
-    heroVideo.muted = !heroVideo.muted;
+    }
+  </script>
 
-    if (heroVideo.muted) {
-   soundToggle.textContent = '🔇';
-    } else {
-soundToggle.textContent = '🔊';
-    }
-  });
-}
-    }
+  <script>
+  (() => {
+    const hero = document.getElementById('heroVideo');
+    const heroButton = document.getElementById('soundToggle');
+    const reelButton = document.getElementById('showreelSound');
+    const status = document.getElementById('showreelStatus');
+    let reel, ready = false;
+    const syncHero = () => {
+      heroButton.textContent = hero.muted ? '🔇' : '🔊';
+      heroButton.setAttribute('aria-label', hero.muted ? '대문 소리 켜기' : '대문 소리 끄기');
+      heroButton.setAttribute('aria-pressed', String(!hero.muted));
+    };
+    const syncReel = () => {
+      const muted = !ready || reel.isMuted();
+      reelButton.textContent = muted ? '🔇' : '🔊';
+      reelButton.setAttribute('aria-label', muted ? '쇼릴 소리 켜기' : '쇼릴 소리 끄기');
+      reelButton.setAttribute('aria-pressed', String(!muted));
+    };
+    const muteReel = () => {if (ready) reel.mute(); syncReel();};
+    const muteAll = () => {hero.muted = true; syncHero(); muteReel();};
+    hero.addEventListener('volumechange', syncHero);
+    heroButton.addEventListener('click', () => {
+      hero.muted = !hero.muted;
+      if (!hero.muted) {muteReel(); hero.play().catch(() => {hero.muted = true; syncHero();});}
+      syncHero();
+    });
+    reelButton.addEventListener('click', () => {
+      if (!ready) return;
+      if (reel.isMuted()) {hero.muted = true; syncHero(); reel.unMute(); reel.setVolume(100); reel.playVideo();}
+      else reel.mute();
+      syncReel();
+    });
+    syncHero();
+    const init = () => {
+      if (reel) return;
+      reel = new YT.Player('showreelPlayer', {events: {
+        onReady: event => {ready = true; reelButton.disabled = false; event.target.mute(); event.target.playVideo(); syncReel();},
+        onStateChange: event => {
+          if (event.data === YT.PlayerState.PLAYING) {status.hidden = true; if (!reel.isMuted()) {hero.muted = true; syncHero();}}
+          if (event.data === YT.PlayerState.ENDED) {reel.seekTo(0); reel.playVideo();}
+          syncReel();
+        },
+        onAutoplayBlocked: () => {status.textContent = '재생 버튼을 눌러 영상을 시작해주세요.'; status.hidden = false;},
+        onError: () => {status.textContent = '영상을 불러오지 못했습니다. 유튜브 공개 및 퍼가기 설정을 확인해주세요.'; status.hidden = false; reelButton.disabled = true;}
+      }});
+    };
+    const iframe = document.getElementById('showreelPlayer');
+    const url = new URL(iframe.src);
+    if (location.protocol === 'https:' || location.protocol === 'http:') url.searchParams.set('origin', location.origin);
+    iframe.src = url.toString();
+    const previousReady = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => {if (typeof previousReady === 'function') previousReady(); init();};
+    if (window.YT && window.YT.Player) init();
+    else {const tag = document.createElement('script'); tag.src = 'https://www.youtube.com/iframe_api'; tag.onerror = () => {status.textContent = '영상의 재생 버튼을 이용해주세요.'; status.hidden = false;}; document.head.appendChild(tag);}
+    const modal = document.querySelector('.video-modal');
+    if (modal) new MutationObserver(() => {if (modal.classList.contains('is-open')) muteAll();}).observe(modal, {attributes:true, attributeFilter:['class']});
+    document.addEventListener('visibilitychange', () => {if (document.hidden) muteAll();});
+    if ('IntersectionObserver' in window) new IntersectionObserver(entries => {entries.forEach(entry => {if (!entry.isIntersecting) {if (entry.target.id === 'top') {hero.muted = true; syncHero();} else muteReel();}});}, {threshold:0}).observe(document.getElementById('showreelSection'));
+  })();
   </script>
 </body>
 </html>
